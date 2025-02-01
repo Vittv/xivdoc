@@ -1,0 +1,221 @@
+/*
+    Josh's Custom CSS Reset
+    https://www.joshwcomeau.com/css/custom-css-reset/
+    */
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+        }
+    
+        * {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    
+        body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        }
+    
+        img, picture, video, canvas, svg {
+        display: block;
+        max-width: 100%;
+        }
+    
+        input, button, textarea, select {
+        font: inherit;
+        }
+    
+        p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+        }
+    
+        p {
+        text-wrap: pretty;
+        }
+        h1, h2, h3, h4, h5, h6 {
+        text-wrap: balance;
+        }
+    
+        #root, #__next {
+        isolation: isolate;
+        }
+
+/* main page */
+
+* {
+    --primary-background-color: #222;
+    --secondary-background-color: #333;
+    --main-text-color: #e6e6e6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-background-color);
+    color: var(--main-text-color);
+}
+
+/* nav bar */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: grey 2px solid;
+    font-size: calc(1rem + 0.5vw);
+    width: 100%;
+    background-color: var(--secondary-background-color);
+}
+
+.nav-title {
+    margin-left: clamp(0rem, 5vw, 10rem);
+    font-size: calc(2rem + 0.5vw);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    margin-right: clamp(0rem, 5vw, 10rem);
+}
+
+.color-theme-btn {
+    border: none;
+    background-color: inherit;
+    color: black;
+}
+
+.color-theme-btn:hover {
+    background-color: black;
+    color: white;
+}
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 2rem);
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+/* side nav bar */
+.side-nav-bar {
+    font-size: calc(0.5rem + 0.8vw);
+    background-color: var(--secondary-background-color);
+    border-right: grey 2px solid;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    text-align: right;
+    overflow: auto;
+}
+
+li.dropdown-toggle {
+    margin-bottom: 2rem;
+}
+
+li.dropdown-toggle,
+ul.dropdown {
+    list-style: none;
+}
+
+ul.dropdown {
+    font-size: calc(0.5rem + 0.6vw);
+}
+
+a.side-nav-bar {
+    text-decoration: none;
+}
+/* main content */
+.main-content {
+    display: flex;
+}
+
+.greetings-title {
+    margin-bottom: 2rem;
+}
+
+.greetings-content {
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: var(--main-text-color);
+    font-size: calc(1rem + 0.5vw);
+    margin-left: clamp(0rem, 2vw, 10rem);
+    margin-right: clamp(0rem, 5vw, 10rem);
+    margin-top: clamp(0rem, 3vw, 10rem);
+    max-width: 75ch;
+}
+
+.greetings-beginning-title,
+.greetings-disclaimer-title,
+.greetings-feedback-title {
+    margin-bottom: 1rem;
+}
+
+.greetings-disclaimer {
+    margin-top: 2rem;
+}
+
+.greetings-feedback {
+    margin-top: 2rem;
+}
+
+.greetings-goodbye {
+    margin-top: 2rem;
+}
+
+h1 {
+    font-size: calc(2rem + 0.5vw);
+}
+/* footer */
+footer {
+    background-color: rgb(35, 36, 39);
+    color: white;
+    width: 100%;
+    font-size: calc(0.8rem + 0.1vw);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.se-credits-container {
+    margin-left: clamp(0rem, 5vw, 10rem);
+}
+
+.author-credits-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.github-icon {
+    margin-right: clamp(0rem, 5vw, 10rem);
+    margin-left: 0.8rem;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.github-icon:hover {
+    color: rgb(129, 129, 129);
+}
+
+/* 
+Notes
+
+    1 - Starting to think the main page content should be on the about page
+    2 - The main page should then maybe have content regarding how to use the website or something a little more introductory
+
+
+
+*/
