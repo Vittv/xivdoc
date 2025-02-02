@@ -223,6 +223,11 @@ li {
     margin-top: 2rem;
 }
 
+.credits-section {
+    margin-top: 2rem;
+}
+
+/* general settings */
 h1 {
     font-size: calc(2rem + 0.5vw);
     margin-bottom: 2rem;
