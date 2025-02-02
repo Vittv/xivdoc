@@ -44,10 +44,12 @@
 /* main page */
 
 * {
+    /* dark theme */
     --primary-background-color: #222;
     --secondary-background-color: #333;
     --main-text-background-color: rgb(255, 251, 240);
     --main-text-color: #fff;
+    --good-blue-color: #459cff;
 }
 
 body {
@@ -129,7 +131,7 @@ li {
 
 .section-links,
 .section-content {
-    border-left: 2px solid grey;
+    border-left: 1px solid grey;
 }
 
 .section-header {
@@ -138,13 +140,39 @@ li {
     margin-top: 1rem;
 }
 
-.section-content {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-decoration: underline;
-    line-height: 1.8;
+.section-header h3 {
+    font-weight: normal;
+    font-size: calc(1rem + 0.1vw);
 }
 
+.section-content {
+    padding-top: 1rem;
+    line-height: 1.8;
+    font-weight: bold;
+}
+
+.section-content li {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+.session-content li:hover {
+    text-decoration-color: grey;
+}
+
+.section-content a:hover {
+    color: grey;
+}
+
+.section-permalink {
+    color: #459cff;
+}
+
+.link-arrow {
+    color: yellow;
+}
+
+/* about page */
 .greetings-title {
     margin-bottom: 2rem;
 }
@@ -214,13 +242,3 @@ footer {
 .github-icon:hover {
     color: rgb(129, 129, 129);
 }
-
-/* 
-Notes
-
-    1 - Starting to think the main page content should be on the about page
-    2 - The main page should then maybe have content regarding how to use the website or something a little more introductory
-
-
-
-*/
