@@ -152,10 +152,6 @@ li {
     font-weight: bold;
 }
 
-.section-content li {
-
-}
-
 .session-content li:hover {
     text-decoration-color: grey;
 }
