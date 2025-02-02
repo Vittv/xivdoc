@@ -55,6 +55,7 @@
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     background-color: var(--primary-background-color);
     color: var(--main-text-color);
 }
@@ -64,7 +65,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: grey 2px solid;
+    border-bottom: grey 1px solid;
     font-size: calc(1rem + 0.5vw);
     width: 100%;
     background-color: var(--secondary-background-color);
@@ -84,13 +85,13 @@ body {
 .color-theme-btn {
     border: none;
     background-color: inherit;
-    color: black;
+    color: var(--main-text-color);
 }
 
 .color-theme-btn:hover {
-    background-color: black;
-    color: white;
+    color: black;
 }
+
 .nav-links {
     display: flex;
     flex-direction: row;
@@ -152,16 +153,20 @@ li {
 }
 
 .section-content li {
-    text-decoration: underline;
-    text-underline-offset: 0.5rem;
+
 }
 
 .session-content li:hover {
     text-decoration-color: grey;
 }
 
+.section-content a {
+    border-bottom: 1px solid white;
+}
+
 .section-content a:hover {
     color: grey;
+    border-bottom: 1px solid grey;
 }
 
 .section-permalink {
@@ -170,6 +175,7 @@ li {
 
 .link-arrow {
     color: yellow;
+    border-bottom: 1px solid #222; /* lol */
 }
 
 /* about page */
@@ -206,6 +212,7 @@ h3 {
 }
 /* footer */
 footer {
+    margin-top: auto;
     background-color: rgb(35, 36, 39);
     color: white;
     width: 100%;
@@ -241,4 +248,11 @@ footer {
 
 .github-icon:hover {
     color: rgb(129, 129, 129);
+}
+
+/* media */
+@media (max-width: 500px) {
+    html {
+        font-size: 70%;
+    }
 }
