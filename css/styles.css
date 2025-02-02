@@ -133,6 +133,12 @@ li {
     padding-bottom: 1rem;
 }
 
+.section-links {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
 .section-links,
 .section-content {
     border-left: 1px solid grey;
@@ -285,8 +291,3 @@ footer {
     }
 }
 
-@media (max-width: 500px) {
-    html {
-        font-size: 70%;
-    }
-}
