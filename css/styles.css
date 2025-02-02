@@ -104,6 +104,9 @@ body {
 a {
     text-decoration: none;
     color: var(--main-text-color);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 li {
@@ -122,7 +125,7 @@ li {
     margin-left: clamp(0rem, 5vw, 10rem);
     margin-right: clamp(0rem, 5vw, 10rem);
     margin-top: clamp(0rem, 3vw, 10rem);
-    max-width: 75ch;
+    max-width: 80ch;
 }
 
 .sections {
@@ -174,6 +177,29 @@ li {
     border-bottom: 1px solid #222; /* lol */
 }
 
+/* fight pages */
+.fight-sections {
+    line-height: 1.8;
+}
+
+.strat-link {
+    font-weight: bold;
+    border-bottom: 1px solid white;;
+}
+
+.strat-link:hover {
+    color: grey;
+    border-bottom: 1px solid grey;
+}
+
+.phase-title {
+    margin-top: 1rem;
+}
+
+.extra-info-title {
+    margin-top: 1rem;
+}
+
 /* about page */
 .greetings-title {
     margin-bottom: 2rem;
@@ -203,7 +229,8 @@ h1 {
 }
 
 h2,
-h3 {
+h3,
+h4 {
     margin-bottom: 1rem;
 }
 /* footer */
@@ -247,6 +274,12 @@ footer {
 }
 
 /* media */
+@media (max-width: 700px) {
+    html {
+        font-size: 90%;
+    }
+}
+
 @media (max-width: 500px) {
     html {
         font-size: 70%;
