@@ -44,7 +44,22 @@
 /* main page */
 
 * {
-    /* dark theme */
+    /* (fallback) */
+    --bg-color: white;
+    --text-color: black;
+}
+
+[data-theme="light"] {
+    --primary-background-color: #dedede;
+    --secondary-background-color: #eeeeee;
+    --main-text-color: #333;
+    --main-text-hover-color: grey;
+    --phase-permalink-color: #459cff;
+    --resource-permalink-color: #BD7CEC;
+    --link-arrow-color: rgb(125, 0, 85);
+}
+
+[data-theme="dark"] {
     --primary-background-color: #222;
     --secondary-background-color: #333;
     --main-text-color: #f2f2f2;
@@ -67,7 +82,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: grey 1px solid;
+    border-bottom: var(--main-text-hover-color) 1px solid;
     font-size: calc(1rem + 0.5vw);
     width: 100%;
     background-color: var(--secondary-background-color);
@@ -84,14 +99,16 @@ body {
     margin-right: clamp(0rem, 5vw, 10rem);
 }
 
-.color-theme-btn {
+.theme-toggle {
     border: none;
-    background-color: inherit;
+    border-radius: 50%;
+    background-color: var(--secondary-background-color);
     color: var(--main-text-color);
 }
 
-.color-theme-btn:hover {
-    color: black;
+.theme-toggle:hover {
+    background-color: var(--main-text-color);
+    color: var(--secondary-background-color);
 }
 
 .nav-links {
@@ -143,7 +160,7 @@ li {
 
 .section-links,
 .section-content {
-    border-left: 1px solid grey;
+    border-left: 1px solid var(--main-text-hover-color);
 }
 
 .section-header {
@@ -164,20 +181,20 @@ li {
 }
 
 .session-content li:hover {
-    text-decoration-color: grey;
+    text-decoration-color: var(--main-text-hover-color);
 }
 
 .section-content a {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--main-text-color);
 }
 
 .section-content a:hover {
-    color: grey;
-    border-bottom: 1px solid grey;
+    color: var(--main-text-hover-color);
+    border-bottom: 1px solid var(--main-text-hover-color);
 }
 
 .section-permalink {
-    color: #459cff;
+    color: var(--phase-permalink-color);
 }
 
 .resources {
@@ -185,8 +202,8 @@ li {
 }
 
 .link-arrow {
-    color: yellow;
-    border-bottom: 1px solid #222; /* lol */
+    color: var(--link-arrow-color);
+    border-bottom: 1px solid var(--primary-background-color); /* lol */
 }
 
 /* fight pages */
@@ -196,12 +213,12 @@ li {
 
 .strat-link {
     font-weight: bold;
-    border-bottom: 1px solid white;;
+    border-bottom: 1px solid var(--main-text-color);;
 }
 
 .strat-link:hover {
-    color: grey;
-    border-bottom: 1px solid grey;
+    color: var(--main-text-hover-color);
+    border-bottom: 1px solid var(--main-text-hover-color);
 }
 
 .phase-title {
