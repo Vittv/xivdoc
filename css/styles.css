@@ -249,6 +249,7 @@ li {
 .greetings-disclaimer-title,
 .greetings-feedback-title {
     margin-bottom: 1rem;
+    font-weight: 400;
 }
 
 .greetings-disclaimer {
@@ -265,6 +266,7 @@ li {
 
 .credits-section {
     margin-top: 2rem;
+    font-weight: 400;
 }
 
 /* general settings */
