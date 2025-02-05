@@ -103,13 +103,12 @@ body {
 .theme-toggle {
     border: none;
     border-radius: 50%;
-    background-color: var(--secondary-background-color);
     color: var(--main-text-color);
+    background-color: var(--secondary-background-color);
 }
 
 .theme-toggle:hover {
-    background-color: var(--main-text-color);
-    color: var(--secondary-background-color);
+    color: var(--main-text-hover-color)
 }
 
 .nav-links {
