@@ -1,6 +1,8 @@
 import { applyTheme, toggleTheme } from "./theme.js";
 import { toggleDropdown } from "./dropdown.js";
+import { enableSmoothScroll } from "./navigation.js";
 
+// Handles themes for the page
 document.addEventListener("DOMContentLoaded", () => {
     applyTheme(); // Apply preferred theme on page load
 
@@ -10,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// Handles dropdowns for the page
 document.addEventListener("DOMContentLoaded", () => {
     const headers = document.querySelectorAll(".header-container");
     headers.forEach(header => {
@@ -17,3 +20,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Handles back to top function
+enableSmoothScroll("backToTop");

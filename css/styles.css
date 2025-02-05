@@ -54,6 +54,7 @@
     --secondary-background-color: #eeeeee;
     --main-text-color: #333;
     --main-text-hover-color: grey;
+    --main-title-line-color: yellow;
     --phase-permalink-color: #459cff;
     --resource-permalink-color: #BD7CEC;
     --link-arrow-color: rgb(125, 0, 85);
@@ -64,6 +65,7 @@
     --secondary-background-color: #333;
     --main-text-color: #f2f2f2;
     --main-text-hover-color: grey;
+    --main-title-line-color: yellow;
     --phase-permalink-color: #459cff;
     --resource-permalink-color: #BD7CEC;
     --link-arrow-color: yellow;
@@ -93,11 +95,34 @@ body {
     font-size: calc(2rem + 0.5vw);
     font-weight: 300;
     text-decoration: none;
+    transition: color 0.1s ease-in-out;
+}
+
+.nav-title:hover {
+    color: var(--main-text-hover-color);
 }
 
 .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 2rem);
+    list-style: none;
     margin-right: clamp(0rem, 5vw, 10rem);
     font-weight: 300;
+}
+
+.nav-btn {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    transition: text-decoration-color 0.2s ease-in-out;
+}
+  
+.nav-btn:hover {
+    text-decoration-color: var(--phase-permalink-color);
 }
 
 .theme-toggle {
@@ -109,15 +134,6 @@ body {
 
 .theme-toggle:hover {
     color: var(--main-text-hover-color)
-}
-
-.nav-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: clamp(0.5rem, 1vw, 2rem);
-    list-style: none;
 }
 
 a {
@@ -226,7 +242,7 @@ li {
 }
 
 .fight-title {
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .phase-title {
@@ -248,24 +264,18 @@ li {
 .greetings-disclaimer-title,
 .greetings-feedback-title {
     margin-bottom: 1rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
-.greetings-disclaimer {
-    margin-top: 2rem;
-}
-
-.greetings-feedback {
-    margin-top: 2rem;
-}
-
+.greetings-disclaimer,
+.greetings-feedback,
 .greetings-goodbye {
     margin-top: 2rem;
 }
 
 .credits-section {
     margin-top: 2rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 /* general settings */
@@ -310,8 +320,27 @@ h4 {
 
 .dropdown-arrow {
     transition: transform 0.3s ease-in-out;
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
+}
+
+.back-link {
+    font-weight: 400;
+}
+
+.back-link:hover {
+    color: var(--main-text-hover-color)
+}
+
+.back-arrow {
+    font-size: 1.8rem;
+    color: var(--link-arrow-color);
+}
+
+.bottom-nav-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .expandable {
