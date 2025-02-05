@@ -91,12 +91,13 @@ body {
 .nav-title {
     margin-left: clamp(0rem, 5vw, 10rem);
     font-size: calc(2rem + 0.5vw);
-    font-weight: 700;
+    font-weight: 300;
     text-decoration: none;
 }
 
 .nav-links {
     margin-right: clamp(0rem, 5vw, 10rem);
+    font-weight: 300;
 }
 
 .theme-toggle {
@@ -145,6 +146,10 @@ li {
     margin-right: clamp(0rem, 5vw, 10rem);
     margin-top: clamp(0rem, 3vw, 10rem);
     max-width: 80ch;
+}
+
+.doc-span {
+    border-bottom: 1px solid var(--phase-permalink-color);
 }
 
 .sections {
@@ -221,12 +226,18 @@ li {
     border-bottom: 1px solid var(--main-text-hover-color);
 }
 
+.fight-title {
+    font-weight: 400;
+}
+
 .phase-title {
     margin-top: 1rem;
+    font-weight: 400;
 }
 
 .extra-info-title {
     margin-top: 1rem;
+    font-weight: 400;
 }
 
 /* about page */
@@ -260,12 +271,54 @@ li {
 h1 {
     font-size: calc(2rem + 0.5vw);
     margin-bottom: 2rem;
+    font-weight: 300;
 }
 
 h2,
 h3,
 h4 {
     margin-bottom: 1rem;
+}
+
+/* dropdown settings */
+.sections {
+    border-top: 1px solid var(--main-text-hover-color);
+}
+
+.header-container {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    user-select: none;
+}
+
+.header-container:hover {
+    color: var(--main-text-hover-color);
+}
+
+.h2-section-header {
+    width: 8rem;
+    user-select: none;
+    font-weight: 400;
+}
+
+.main-menu {
+    border-right: 1px solid var(--main-text-hover-color);
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease-in-out;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.expandable {
+    display: none;
+    transition: max-height 0.3s ease-out;
+}
+
+.section-links.open {
+    display: block;
 }
 /* footer */
 footer {
