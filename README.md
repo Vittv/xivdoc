@@ -5,7 +5,7 @@ All content used is properly referenced and credited to its creators. This will 
 
 # Resources:
 
-## Ultimates
+## Ultimate
 
 - The Unending Coil of Bahamut (UCOB)
 - The Weapon's Refrain (UWU)

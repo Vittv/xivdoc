@@ -22,3 +22,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Handles back to top function
 enableSmoothScroll("backToTop");
+
