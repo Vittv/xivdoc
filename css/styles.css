@@ -245,6 +245,10 @@ li {
     font-weight: 300;
 }
 
+.fight-title-description {
+    font-weight: 300;
+}
+
 .phase-title {
     margin-top: 1rem;
     font-weight: 400;
@@ -253,6 +257,10 @@ li {
 .extra-info-title {
     margin-top: 1rem;
     font-weight: 400;
+}
+
+li.prepull-spots {
+    font-family: monospace;
 }
 
 /* about page */
