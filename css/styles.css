@@ -173,6 +173,9 @@ li {
 }
 
 .section-links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
     word-break: break-word;
     overflow-wrap: break-word;
     white-space: normal;
@@ -327,9 +330,16 @@ h4 {
 }
 
 .dropdown-arrow {
-    transition: transform 0.3s ease-in-out;
-    font-size: 1.6rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
+}
+
+.dropdown-arrow i {
+    transition: transform 0.1s ease;
+}
+
+.rotated {
+    transform: rotate(180deg);
 }
 
 .back-link {
@@ -352,12 +362,7 @@ h4 {
 }
 
 .expandable {
-    display: none;
-    transition: max-height 0.3s ease-out;
-}
-
-.section-links.open {
-    display: block;
+    transition: max-height 0.2s ease-out;
 }
 /* footer */
 footer {
