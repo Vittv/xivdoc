@@ -272,6 +272,11 @@ li {
     font-weight: 400;
 }
 
+.tiny-text {
+    font-size: 1rem;
+    font-style: italic;
+}
+
 li.prepull-spots {
     font-family: monospace;
 }
@@ -308,7 +313,8 @@ h1 {
 
 h2,
 h3,
-h4 {
+h4,
+h5 {
     margin-bottom: 1rem;
 }
 
