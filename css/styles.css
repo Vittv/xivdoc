@@ -173,12 +173,15 @@ li {
 }
 
 .section-links {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
     word-break: break-word;
     overflow-wrap: break-word;
     white-space: normal;
+}
+
+.section-links.expandable {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 
 .section-links,
