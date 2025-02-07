@@ -58,6 +58,7 @@
     --phase-permalink-color: #459cff;
     --resource-permalink-color: #BD7CEC;
     --link-arrow-color: rgb(125, 0, 85);
+    --theme-button-color: #444;
 }
 
 [data-theme="dark"] {
@@ -69,6 +70,7 @@
     --phase-permalink-color: #459cff;
     --resource-permalink-color: #BD7CEC;
     --link-arrow-color: yellow;
+    --theme-button-color: #e6e6e6;
 }
 
 body {
@@ -135,12 +137,9 @@ body {
     user-select: none;
 }
 
-.theme-toggle:hover {
-    color: var(--main-text-hover-color)
-}
-
 .material-icons-outlined {
     font-size: 1.6rem;
+    color: var(--theme-button-color);
 }
 
 a {
