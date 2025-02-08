@@ -276,6 +276,14 @@ li {
     font-style: italic;
 }
 
+.li-title {
+    font-weight: 500;
+}
+
+.compact-text {
+    margin-bottom: 1rem;
+}
+
 li.prepull-spots {
     font-family: monospace;
 }
