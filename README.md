@@ -27,9 +27,9 @@ XIVDoc currently covers:
 <summary><strong>Savage</strong></summary>
 
 - AAC Light-heavyweight M1 (Savage)
-- AAC Light-heavyweight M1 (Savage)
-- AAC Light-heavyweight M1 (Savage)
-- AAC Light-heavyweight M1 (Savage)
+- AAC Light-heavyweight M2 (Savage)
+- AAC Light-heavyweight M3 (Savage)
+- AAC Light-heavyweight M4 (Savage)
 
 </details>
 <details>
