@@ -14,35 +14,45 @@ XIVDoc currently covers:
 
 <details>
 <summary><strong>Ultimate</strong></summary>
+
 - The Unending Coil of Bahamut (UCOB)
 - The Weapon's Refrain (UWU)
 - The Epic of Alexander (TEA)
 - Dragonsong Reprise (DSR)
 - The Omega Protocol (TOP)
 - Futures Rewritten (FRU)
+
 </details>
 <details>
 <summary><strong>Savage</strong></summary>
+
 - AAC Light-heavyweight M1 (Savage)
 - AAC Light-heavyweight M1 (Savage)
 - AAC Light-heavyweight M1 (Savage)
 - AAC Light-heavyweight M1 (Savage)
+
 </details>
 <details>
 <summary><strong>Extreme</strong></summary>
+
 - Worqor Lar Dor (Extreme)
 - Everkeep (Extreme)
 - The Minstrel's Ballad: Sphene's Burden
+
 </details>
 <details>
 <summary><strong>Unreal</strong></summary>
+
 - The Jade Stoa (Unreal)
+
 </details>
 <details>
 <summary><strong>Criterion</strong></summary>
+
 - Another Sil'dihn Subterrane
 - Another Mount Rokkon
 - Another Aloalo Island
+
 </details>
 
 ### Stack
