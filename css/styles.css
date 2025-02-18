@@ -226,7 +226,12 @@ li {
 }
 
 .section-permalink {
+    font-weight: 700;
     color: var(--phase-permalink-color);
+}
+
+.section-permalink:hover {
+    color: var(--main-text-hover-color);
 }
 
 .resources {
