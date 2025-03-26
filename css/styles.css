@@ -83,6 +83,7 @@ body {
 
 /* nav bar */
 .nav-bar {
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -90,6 +91,12 @@ body {
     font-size: calc(1rem + 0.5vw);
     width: 100%;
     background-color: var(--secondary-background-color);
+    z-index: 700;
+}
+
+/* extra spacing so the header doesn't go on top */
+:target, h4[id] {
+    scroll-margin-top: 4rem;
 }
 
 .nav-title {
@@ -158,14 +165,13 @@ li {
 .main-content {
     display: flex;
     flex-direction: column;
-    padding-top: 1rem;
+    padding-top: 7rem;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
     color: var(--main-text-color);
     font-size: calc(1rem + 0.2vw);
     margin-left: clamp(0rem, 5vw, 10rem);
     margin-right: clamp(0rem, 5vw, 10rem);
-    margin-top: clamp(0rem, 3vw, 10rem);
     max-width: 80ch;
 }
 
