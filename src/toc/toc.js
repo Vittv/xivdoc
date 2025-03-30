@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("h2, h3"); // Select headings
+    const sections = document.querySelectorAll("h2[id], h3[id]"); // Select headings
     const links = document.querySelectorAll(".tb-content a");
     const firstSection = sections[0]; // First section (Phase 1)
     const firstLink = document.querySelector(`.tb-content a[href="#${firstSection.id}"]`);
