@@ -52,7 +52,7 @@
 
 [data-theme="light"] {
     --primary-background-color: #dedede;
-    --secondary-background-color: #ededed;
+    --secondary-background-color: #d2d2d2;
     --main-text-color: #333;
     --main-text-hover-color: grey;
     --main-title-line-color: yellow;
@@ -379,6 +379,10 @@ ul {
 
 .resources {
     color: var(--resource-permalink-color);
+}
+
+.title-link {
+    display: inline-block;
 }
 
 .title-link h3:hover {
