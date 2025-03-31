@@ -60,6 +60,8 @@
     --resource-permalink-color: #BD7CEC;
     --link-arrow-color: rgb(125, 0, 85);
     --theme-button-color: #444;
+    --text-link-color: #0069c2;
+    --text-link-visited-color: #551a8b;
 }
 
 [data-theme="dark"] {
@@ -72,6 +74,8 @@
     --resource-permalink-color: #BD7CEC;
     --link-arrow-color: yellow;
     --theme-button-color: #e6e6e6;
+    --text-link-color: #8cb4ff;
+    --text-link-visited-color: #ffadff;
 }
 
 /* scroll */
@@ -196,6 +200,7 @@ li {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100vh;
 }
 
 .container {
@@ -232,6 +237,15 @@ li {
     width: 10rem;
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+.left-sidebar-title a {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.left-sidebar-title a:hover {
+    font-weight: 700;
 }
 
 .shortcut-section {
@@ -294,7 +308,7 @@ li {
 }
 
 .doc-span {
-    border-bottom: 1px solid var(--phase-permalink-color);
+    border-bottom: 1px solid var(--text-link-color);
 }
 
 .sections {
@@ -336,6 +350,7 @@ ul {
 
 .section-content {
     padding-top: 1rem;
+    padding-bottom: 1rem;
     line-height: 1.8;
     font-weight: bold;
 }
@@ -364,6 +379,11 @@ ul {
 
 .resources {
     color: var(--resource-permalink-color);
+}
+
+.title-link h3:hover {
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 .link-arrow {
@@ -485,6 +505,53 @@ h5 {
 
 .main-menu {
     border-right: 1px solid var(--main-text-hover-color);
+}
+
+.contents-navbar {
+    background-color: var(--secondary-background-color);
+    color: var(--main-text-color);
+    padding: 0.4rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contents-navbar a {
+    text-decoration: underline;
+    font-size: 1.1rem;
+    color: var(--text-link-color);
+}
+
+.text-link {
+    color: var(--text-link-color);
+    text-decoration: underline;
+}
+
+.text-link:visited {
+    color: var(--text-link-visited-color);
+}
+
+.text-link:hover {
+    color: var(--main-text-hover-color);
+}
+
+.sections.fights-menu {
+    border: none;
+    padding: 0;
+}
+
+.fights-page-menu {
+    border: none;
+}
+
+.fights-page-menu.section-links {
+    border-right: 1px solid var(--main-text-hover-color);
+}
+
+.fights-menu .header-container{
+    font-size: 1.3rem;
+    background-color: var(--secondary-background-color);
+    padding: 0.4rem 0.5rem;
+    border-top: 1px solid var(--main-text-hover-color);    
 }
 
 .dropdown-arrow {

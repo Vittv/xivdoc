@@ -70,3 +70,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+/* 
+
+<div class="sidebar">
+                <h4>Guides</h4>
+                <div class="shortcut-section sections" id="shorcut-section">
+                    <div class="shortcut-section ultimate-section"></div>
+                    <div class="shortcut-section savage-section"></div>
+                    <div class="shortcut-section extreme-section"></div>
+                    <div class="shortcut-section unreal-section"></div>
+                    <div class="shortcut-section chaotic-section"></div>
+                    <div class="shortcut-section criterion-section"></div>
+                </div>
+            </div>
+*/

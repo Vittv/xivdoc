@@ -16,16 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const link = document.querySelector(`.tb-content a[href="#${id}"]`);
 
             if (link) {
-                // Get the color from section-permalink
-                const colorElement = section.querySelector(".section-permalink");
+                // Determine the color based on the class of the link
                 let color = "transparent"; // Default if no color is found
 
-                if (colorElement) {
-                    if (colorElement.classList.contains("resources")) {
-                        color = getComputedStyle(document.documentElement).getPropertyValue("--resource-permalink-color");
-                    } else {
-                        color = getComputedStyle(document.documentElement).getPropertyValue("--phase-permalink-color");
-                    }
+                if (link.classList.contains("resource")) {
+                    color = getComputedStyle(document.documentElement).getPropertyValue("--resource-permalink-color");
+                } else if (link.classList.contains("fight")) {
+                    color = getComputedStyle(document.documentElement).getPropertyValue("--phase-permalink-color");
                 }
 
                 // Apply styles
