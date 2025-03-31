@@ -74,6 +74,37 @@
     --theme-button-color: #e6e6e6;
 }
 
+/* scroll */
+/* WebKit Browsers (Chrome, Safari, Edge, Opera) */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--main-text-hover-color);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(#222, 0.8);
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--primary-background-color);
+  }
+  
+  /* Firefox */
+  * {
+    scrollbar-color: var(--main-text-hover-color) var(--primary-background-color);
+  }
+  
+  /* Internet Explorer & Legacy Edge */
+  body {
+    scrollbar-face-color: var(--main-text-hover-color);
+    scrollbar-track-color: var(--primary-background-color);
+  }
+  
+
 body {
     display: flex;
     flex-direction: column;

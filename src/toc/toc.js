@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Highlight Phase 1 immediately on page load
-    setActiveLink(firstSection);
+    requestAnimationFrame(() => highlightCurrentSection());
 
     window.addEventListener("scroll", highlightCurrentSection);
 });
