@@ -63,6 +63,7 @@
     --text-link-color: #0069c2;
     --text-link-visited-color: #551a8b;
     --xiv-navtitle-color: rgb(125, 0, 0);
+    --card-background-color: #e7e7e7;
 }
 
 [data-theme="dark"] {
@@ -78,6 +79,7 @@
     --text-link-color: #8cb4ff;
     --text-link-visited-color: #ffadff;
     --xiv-navtitle-color: rgb(221, 0, 0);
+    --card-background-color: #272727;
 }
 
 /* scroll */
@@ -136,7 +138,7 @@ body {
     font-size: calc(1rem + 0.5vw);
     background-color: var(--primary-background-color);
     z-index: 700;
-    max-width: 80rem;
+    max-width: 100rem;
     height: 4rem;
     margin-left: auto;
     margin-right: auto;
@@ -150,7 +152,7 @@ body {
 }
 
 .navbar-right {
-    gap: 2rem;
+    gap: 1rem;
     font-size: 1.2rem;
 }
 
@@ -227,11 +229,12 @@ li {
 /* page banner */
 
 .main-menu {
+    width: 100%;
     position: relative;
     background-image: url("/assets/banner/thearchive.png");
     background-size: cover;
     background-position: center;
-    height: 15rem;
+    height: 20rem;
 }
 
 .main-banner {
@@ -288,7 +291,7 @@ li {
 /* cards */
 .page-cards {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .card-one {
@@ -296,6 +299,7 @@ li {
 }
 
 .card-title {
+    text-decoration: underline;
     padding-top: 1rem;
     padding-left: 1rem;
     font-size: 1.4rem;
@@ -305,15 +309,15 @@ li {
 }
 
 .card-container {
-    width: 100%;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
     font-size: 1rem;
-    background-color: var(--secondary-background-color);
+    background-color: var(--card-background-color);
     transition: 0.2s ease;
+    border-left: 1px solid #161616;
 }
 
 .card-container:hover {
@@ -343,6 +347,17 @@ li {
     border-radius: 1rem;
 }
 
+.introduction,
+.change-log {
+    border-left: 1px solid var(--secondary-background-color);
+}
+
+.introduction-content,
+.change-log-content {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
 /* left sidebar */
 .sidebar {
     position: sticky;
@@ -351,7 +366,7 @@ li {
     padding-top: 7rem;
     font-size: calc(1rem + 0.2vw);
     height: 100vh;
-    width: 15rem;
+    width: 12.5rem;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -397,7 +412,7 @@ li {
     padding-top: 7rem;
     font-size: calc(1rem + 0.2vw);
     height: 100vh;
-    width: 10rem;
+    width: 12.5rem;
 }
 
 .tb-content {
@@ -500,6 +515,7 @@ ul {
 
 .title-link {
     display: inline-block;
+    font-weight: 700;
 }
 
 .title-link h3:hover {
@@ -537,7 +553,7 @@ ul {
 
 .phase-title {
     margin-top: 1rem;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .extra-info-title {
@@ -797,9 +813,6 @@ footer {
         width: 45ch;
     }
 
-    .theme-toggle {
-        margin-top: 0.5rem;
-    }
     .nav-bar {
         width: 24rem;
     }
