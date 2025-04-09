@@ -9,7 +9,7 @@
 
         * {
         margin: 0;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
         body {
@@ -286,76 +286,6 @@ li {
     margin-left: 2%;
     /* max-width: 55rem; */
     width: 55rem;
-}
-
-/* cards */
-.page-cards {
-    display: flex;
-    flex-direction: row;
-}
-
-.card-one {
-    background-color: #161616;
-}
-
-.card-title {
-    text-decoration: underline;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    font-size: 1.4rem;
-    color: #fff;
-    font-weight: 300;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.card-container {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem;
-    font-size: 1rem;
-    background-color: var(--card-background-color);
-    transition: 0.2s ease;
-    border-left: 1px solid #161616;
-}
-
-.card-container:hover {
-    transform: scale(1.05);
-}
-
-.card-two {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-}
-
-.tiny-card {
-    background-color: #0069c2;
-    color: var(--primary-background-color);
-    padding: 0.6rem;
-    border-radius: 0.6rem;
-}
-
-.card-description {
-    padding: 0 1rem;
-    height: 10rem;
-    overflow-y: auto;
-    border: 1px solid var(--secondary-background-color);
-    border-radius: 1rem;
-}
-
-.introduction,
-.change-log {
-    border-left: 1px solid var(--secondary-background-color);
-}
-
-.introduction-content,
-.change-log-content {
-    padding-top: 1rem;
-    padding-left: 1rem;
 }
 
 /* left sidebar */
@@ -737,13 +667,73 @@ h5 {
 .expandable {
     transition: max-height 0.2s ease-out;
 }
+
+/* front page specific */
+
+.front-page {
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.welcome {
+    max-width: 40ch;
+}
+
+.duty-card,
+.glossary-card {
+    color: #f2f2f2;
+    background-color: black;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 0.5rem;
+}
+
+.duty-card:hover,
+.glossary-card:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+
+.card-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 4rem;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+    backdrop-filter: blur(10px);
+}
+
+.duty-card {
+    background-image: url("../assets/banner/Recollection1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.glossary-card {
+    background-image: url("../assets/banner/Athena.avif");
+    background-size: cover;
+    background-position: center;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+}
+
+.introduction-content p {
+    font-size: 1.2rem;
+}
+
 /* footer */
 footer {
     margin-top: auto;
     background-color: rgb(35, 36, 39);
     color: white;
     width: 100%;
-    font-size: calc(0.8rem + 0.1vw);
+    font-size: 0.7rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 14px;
 }
@@ -754,6 +744,9 @@ footer {
     align-items: center;
     color: white;
     height: 20rem;
+    max-width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .se-credits-container {
@@ -779,10 +772,33 @@ footer {
 }
 
 /* media */
+
+@media (max-width: 1600px) {
+    .container,
+    .nav-bar,
+    .front-page {
+        width: 80rem;
+    }
+
+    .duty-card,
+    .glossary-card {
+        width: 25rem;
+        height: 25rem;
+    }
+}
+
 @media (max-width: 1400px) {
     .container,
-    .nav-bar {
+    .main-content,
+    .nav-bar,
+    .front-page {
         width: 65rem;
+    }
+
+    .duty-card,
+    .glossary-card {
+        width: 20rem;
+        height: 20rem;
     }
 }
 
@@ -794,13 +810,39 @@ footer {
 
     .container,
     .main-content,
-    .nav-bar {
+    .nav-bar,
+    .front-page {
         margin: 0;
         padding-left: 1rem;
-        width: 50rem;
+        width: 60rem;
     }
     .nav-title {
         padding-left: 1rem;
+    }
+
+    .introduction {
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width: 1180px) {
+    .front-page {
+        padding-top: 2rem;
+        flex-direction: column;
+    }
+
+    .duty-card,
+    .glossary-card {
+        width: 100%;
+    }
+
+    .container,
+    .main-content,
+    .nav-bar,
+    .front-page {
+        margin: 0;
+        padding-left: 1rem;
+        width: 45rem;
     }
 }
 
@@ -809,11 +851,21 @@ footer {
         font-size: 90%;
     }
 
-    .container {
-        width: 45ch;
+    .container,
+    .main-content,
+    .nav-bar,
+    .front-page,
+    .ra {
+        width: 24rem;
     }
 
     .nav-bar {
         width: 24rem;
+    }
+
+    .duty-card,
+    .glossary-card {
+        height: 13rem;
+        width: 21rem;
     }
 }
