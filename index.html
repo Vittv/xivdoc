@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <meta property="og:title" content="XIVDoc">
     <meta property="og:description" content="A comprehensive resource hub for Final Fantasy XIV endgame content. Find everything you need for each encounter, including raidplans, toolboxes, strat pastebins, video guides, markers, prepull setups, and unlock guides—all in one place.">
@@ -21,15 +24,12 @@
         <div class="nav-bar-container">
             <div class="nav-bar">
                 <div class="navbar-left">
-                    <a class="nav-title" href="#"><span class="red-text">XIV</span>Doc</a>
+                    <a class="nav-title" href="#"><span style="color: var(--golden-text-color)">❈</span> <span class="red-text">XIV</span>Doc</a>
                 </div>
                 <div class="navbar-right">
                     <button class="theme-toggle">
                         <span id="theme-icon" class="material-icons-outlined">light_mode</span>
                     </button>
-                    <li class="dropdown">
-                        <a style="font-size: 1rem;" class="dropbtn" href="#">Duty <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span></a>
-                    </li>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
             <div style="width: 105rem;" class="main-content">
                 <div style="border-bottom: 1px solid var(--main-text-color); padding-bottom: 7rem;" class="front-page">
                     <div class="welcome">
-                        <h1 style="font-weight: 700;">Welcome!</h1>
+                        <h1 style="font-weight: 700; font-size: 4rem; font-family: 'Playfair Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Welcome<span style="font-family: 'Playfair Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: var(--golden-text-color)">!</span></h1>
                         <div class="welcome-content">
                             <p>To start learning, access the <strong>Duty</strong> archive for <strong>encounter guides</strong>, and the <strong>Glossary</strong> for <strong>raiding terminology</strong> and other concepts.</p>
                         </div>                       
@@ -59,7 +59,7 @@
                     </a>
                     <div style="margin-top: 2rem;" class="introduction-content">
                         <p> <strong>Final Fantasy XIV</strong> is an ever-evolving world filled with <strong>deep mechanics</strong>, <strong>challenging battles</strong>, and a vast <strong>community-driven culture</strong>. Whether you're a <strong>new</strong> adventurer or a seasoned <strong>veteran</strong>, <strong>XIVDoc</strong> is here to provide <strong>clear</strong>, <strong>concise</strong>, and <strong>reliable</strong> information to enhance your endgame experience.</p>
-                        <p style="margin-top: 1rem;"> The <strong>recommended</strong> way to use this website is to go <strong>learn a fight</strong>, then click on its links <strong>if</strong> there is something you don't understand. You are welcome to read through the entire documentation before jumping into a fight, but it might overwhelm you and not be very productive. Better to learn as you go and are able to practice such concepts.</p>
+                        <p style="margin-top: 1rem;"> The <strong>recommended</strong> way to use this website is to go <strong>learn a fight</strong>, then click on its links <strong><em>if</em></strong> there is something you don't understand. You are welcome to read through the entire documentation before jumping into a fight, but it might overwhelm you and not be very productive. Better to learn as you go and are able to practice such concepts.</p>
                         <p style="margin-top: 1rem;"> The content used on this website is a mix of community contributions and personal knowledge, it is <strong>hard to tell</strong> who owns what specifically, but I will do my best to display my references used to each guide on the About page. There is also a bit more of the goal and reason behind making this entire project on the <a href="" class="text-link">About</a> page if interested.</p>
                     </div>
                 </div>

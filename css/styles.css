@@ -9,7 +9,7 @@
 
         * {
         margin: 0;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: 'Source Sans 3', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
         body {
@@ -64,6 +64,7 @@
     --text-link-visited-color: #551a8b;
     --xiv-navtitle-color: rgb(125, 0, 0);
     --card-background-color: #e7e7e7;
+    --golden-text-color: #cfb611;
 }
 
 [data-theme="dark"] {
@@ -80,6 +81,7 @@
     --text-link-visited-color: #ffadff;
     --xiv-navtitle-color: rgb(221, 0, 0);
     --card-background-color: #272727;
+    --golden-text-color: #e8d037;
 }
 
 /* scroll */
@@ -162,8 +164,8 @@ body {
 }
 
 .nav-title {
-    font-size: 1.4rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+    font-family: 'Source Sans 3', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 700;
     text-decoration: none;
     transition: color 0.1s ease-in-out;
@@ -285,7 +287,7 @@ li {
     margin-right: 2%;
     margin-left: 2%;
     /* max-width: 55rem; */
-    width: 55rem;
+    width: 66rem;
 }
 
 /* left sidebar */
@@ -296,18 +298,9 @@ li {
     padding-top: 7rem;
     font-size: calc(1rem + 0.2vw);
     height: 100vh;
-    width: 12.5rem;
+    width: 22rem;
     overflow-y: auto;
     overflow-x: hidden;
-}
-
-.left-sidebar-title a {
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-.left-sidebar-title a:hover {
-    font-weight: 700;
 }
 
 .shortcut-section {
@@ -316,7 +309,11 @@ li {
 }
 
 .shortcut-section h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+}
+
+.shortcut-section h2:hover {
+    cursor: pointer;
 }
 
 .shortcut-section .section-links.expandable.open {
@@ -324,10 +321,7 @@ li {
 }
 
 .shortcut-section li a{
-    margin-left: 1rem;
-    font-weight: 700;
     font-size: 1rem;
-    border-bottom: 1px solid var(--main-text-color);
 }
 
 .shortcut-section li a:hover {
@@ -394,9 +388,8 @@ ul {
     transition: max-height 0.3s ease-out;
 }
 
-.section-links,
-.section-content {
-    border-left: 1px solid var(--main-text-hover-color);
+.section-links.no-animation {
+    transition: none;
 }
 
 .section-header {
@@ -414,15 +407,10 @@ ul {
     padding-top: 1rem;
     padding-bottom: 1rem;
     line-height: 1.8;
-    font-weight: bold;
 }
 
 .session-content li:hover {
     text-decoration-color: var(--main-text-hover-color);
-}
-
-.section-content a {
-    border-bottom: 1px solid var(--main-text-color);
 }
 
 .section-content a:hover {
@@ -454,6 +442,7 @@ ul {
 }
 
 .link-arrow {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--link-arrow-color);
     border-bottom: 1px solid var(--primary-background-color); /* lol */
 }
@@ -560,14 +549,15 @@ h5 {
 }
 
 .dropdown-menu h2 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.3rem;
     margin-bottom: 0;
     padding: 0.4rem 0;
 }
 
-.header-container:hover {
-    color: var(--main-text-hover-color);
+.simple-menu h2{
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 0;
 }
 
 .h2-section-header {
@@ -625,16 +615,13 @@ h5 {
     border-right: 1px solid var(--main-text-hover-color);
 }
 
-.fights-menu .header-container{
-    font-size: 1.3rem;
-    background-color: var(--secondary-background-color);
-    padding: 0.4rem 0.5rem;
-    border-top: 1px solid var(--main-text-hover-color);    
-}
-
 .dropdown-arrow {
     font-size: 1rem;
     margin-right: 0.5rem;
+}
+
+.tiny-arrow {
+    font-size: 1.5rem;
 }
 
 .dropdown-arrow i {
@@ -654,6 +641,7 @@ h5 {
 }
 
 .back-arrow {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.8rem;
     color: var(--link-arrow-color);
 }
@@ -683,7 +671,10 @@ h5 {
 
 .duty-card,
 .glossary-card {
-    color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     background-color: black;
     height: 30rem;
     width: 30rem;
@@ -692,27 +683,36 @@ h5 {
 
 .duty-card:hover,
 .glossary-card:hover {
-    transform: scale(1.1);
-    transition: 0.2s ease-in-out;
+    transform: scale(1.02);
+    transition: 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 .card-title {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 0.5rem;
+    border-top: 2px solid #e8d037;
+    border-bottom: 2px solid #e8d037;
+    text-align: center;
+    font-family: 'Playfair Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 1rem;
-    font-size: 4rem;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+    width: 100%;
+    font-size: calc(1.5rem + 0.5vw);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
     backdrop-filter: blur(10px);
+    background-color: rgba(13, 13, 13, 0.9);
+    color: #e8d037;
 }
 
 .duty-card {
-    background-image: url("../assets/banner/Recollection1.jpg");
+    filter: saturate(150%);
+    background-image: url("../assets/card/titania.webp");
     background-size: cover;
     background-position: center;
 }
 
 .glossary-card {
-    background-image: url("../assets/banner/Athena.avif");
+    filter: saturate(150%);
+    background-image: url("../assets/card/Athena.avif");
     background-size: cover;
     background-position: center;
 }
@@ -856,7 +856,7 @@ footer {
     .nav-bar,
     .front-page,
     .ra {
-        width: 24rem;
+        width: 23rem;
     }
 
     .nav-bar {
@@ -868,4 +868,5 @@ footer {
         height: 13rem;
         width: 21rem;
     }
+
 }
