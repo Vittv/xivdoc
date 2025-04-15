@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
@@ -14,172 +18,345 @@
     <meta property="og:url" content="https://vittv.github.io/xivdoc/?v=4">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <title>XIVDoc</title>
+    <title>XIVDoc - Glossary</title>
 </head>
 <body>
     <div class="page-wrapper">
         <div class="nav-bar-container">
             <div class="nav-bar">
-                <a class="nav-title" href="../index.html">XIVDoc</a>
-                <button class="theme-toggle">
-                    <span id="theme-icon" class="material-icons-outlined">light_mode</span>
-                </button>
+                <div class="navbar-left">
+                    <a class="nav-title" href="../index.html"><span style="color: var(--golden-text-color)">❈</span> <span class="red-text">XIV</span>Doc</a>
+                </div>
+                <div class="navbar-right">
+                    <button class="theme-toggle">
+                        <span id="theme-icon" class="material-icons-outlined">light_mode</span>
+                    </button>
+                    <div class="hamburger-container">
+                        <div class="hamburger" onclick="toggleMenu()">☰</div>
+                        <div class="hb-dropdown" id="hb-dropdown">
+                            <h4><a href="duty.html">Duty</a></h4>
+                                <div style="border-color: var(--secondary-background-color);" class="shortcut-section sections" id="shortcut-section">
+                                    <div class="ultimate-section sections fights-menu" id="ultimate-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Ultimate</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="ultimate/ucob.html">The Unending Coil of Bahamut (UCOB)</a></li>
+                                                    <li><a href="ultimate/uwu.html">The Weapon's Refrain (UWU)</a></li>
+                                                    <li><a href="ultimate/tea.html">The Epic of Alexander (TEA)</a></li>
+                                                    <li><a href="ultimate/dsr.html">Dragonsong Reprise (DSR)</a></li>
+                                                    <li><a href="ultimate/top.html">The Omega Protocol (TOP)</a></li>
+                                                    <li><a href="ultimate/fru.html">Futures Rewritten (FRU)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="savage-section sections fights-menu" id="savage-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Savage</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="savage/m1s.html">AAC Light-heavyweight M1 (Savage)</a></li>
+                                                    <li><a href="savage/m2s.html">AAC Light-heavyweight M2 (Savage)</a></li>
+                                                    <li><a href="savage/m3s.html">AAC Light-heavyweight M3 (Savage)</a></li>
+                                                    <li><a href="savage/m4s.html">AAC Light-heavyweight M4 (Savage)</a></li>
+
+                                                    <li style="margin-top: 1rem;"><a href="savage/m5s.html">AAC Cruiserweight M1 (Savage)</a></li>
+                                                    <li><a href="savage/m6s.html">AAC Cruiserweight M2 (Savage)</a></li>
+                                                    <li><a href="savage/m7s.html">AAC Cruiserweight M3 (Savage)</a></li>
+                                                    <li><a href="savage/m8s.html">AAC Cruiserweight M4 (Savage)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="extreme-section sections fights-menu" id="extreme-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Extreme</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="extreme/ex1.html">Worqor Lar Dor (Extreme)</a></li>
+                                                    <li><a href="extreme/ex2.html">Everkeep (Extreme)</a></li>
+                                                    <li><a href="extreme/ex3.html">The Minstrel's Ballad: Sphene's Burden</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="unreal-section sections fights-menu" id="unreal-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Unreal</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="unreal/byakko.html">The Jade Stoa (Unreal)</a></li>
+                                                    <li><a href="unreal/suzaku.html">Hells' Kier (Unreal)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chaotic-raid-section sections fights-menu" id="chaotic-raid-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Chaotic</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="chaotic/cod.html">The Cloud of Darkness (Chaotic)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="criterion-section sections fights-menu" id="criterion-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Criterion</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="criterion/crit1.html">Another Sil'dihn Subterrane</a></li>
+                                                    <li><a href="criterion/crit2.html">Another Mount Rokkon</a></li>
+                                                    <li><a href="criterion/crit3.html">Another Aloalo Island</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4><a href="glossary.html">Glossary</a></h4>
+                                <div style="border-color: var(--secondary-background-color);" class="shortcut-section sections" id="shortcut-section">
+                                    <div class="concepts-section sections fights-menu" id="concepts-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Concepts</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="#">Gear & Items</a></li>
+                                                    <li><a href="#">Mechanics</a></li>
+                                                    <li><a href="#">Markers</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="savage-section sections fights-menu" id="savage-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Terminology</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="#">Technical</a></li>
+                                                    <li><a href="#">Common Slang</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>                                
+                             </div>         
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container">
             <div class="sidebar">
-                <h4>Content</h4>
+                <h4><a href="duty.html">Duty</a></h4>
                 <div class="shortcut-section sections" id="shortcut-section">
-                    <h2 class="h2-section-header left-sidebar-title"><a href="fights.html">&bull; Fights</a></h2>
-                    <h2 class="h2-section-header left-sidebar-title"><a href="concepts.html">&bull; Concepts</a></h2>
-                </div>
-            </div>
-            <div class="main-content main-menu fights-page-menu">
-                <h1 class="main-title">Concepts <span class="doc-span">Documentation</span></h1> 
                     <div class="ultimate-section sections fights-menu" id="ultimate-section">
-                        <div class="header-container">
-                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
                             <h2 class="h2-section-header">Ultimate</h2>
                         </div>
-                        <ul class="section-links expandable">
-                            <li class="section-header"><h3>Lv. 70</h3></li>
+                        <div class="section-links expandable">
                             <div class="section-content">
                                 <ul>
-                                    <li><a href="ultimate/ucob.html">The Unending Coil of Bahamut (UCOB)<span class="link-arrow"> →</span></a></li>
-                                    <li><a href="ultimate/uwu.html">The Weapon's Refrain (UWU)<span class="link-arrow"> →</span></a></li>
+                                    <li><a href="ultimate/ucob.html">The Unending Coil of Bahamut (UCOB)</a></li>
+                                    <li><a href="ultimate/uwu.html">The Weapon's Refrain (UWU)</a></li>
+                                    <li><a href="ultimate/tea.html">The Epic of Alexander (TEA)</a></li>
+                                    <li><a href="ultimate/dsr.html">Dragonsong Reprise (DSR)</a></li>
+                                    <li><a href="ultimate/top.html">The Omega Protocol (TOP)</a></li>
+                                    <li><a href="ultimate/fru.html">Futures Rewritten (FRU)</a></li>
                                 </ul>
                             </div>
-                            <li class="section-header"><h3>Lv. 80</h3></li>
-                                    <div class="section-content">
-                                        <ul>
-                                            <li><a href="ultimate/tea.html">The Epic of Alexander (TEA)<span class="link-arrow"> →</span></a></li>
-                                        </ul>
-                                    </div>
-                            <li class="section-header"><h3>Lv. 90</h3></li>
-                            <div class="section-content">
-                                <ul>
-                                    <li><a href="ultimate/dsr.html">Dragonsong Reprise (DSR)<span class="link-arrow"> →</span></a></li>
-                                    <li><a href="ultimate/top.html">The Omega Protocol (TOP)<span class="link-arrow"> →</span></a></li>
-                                </ul>
-                            </div>
-                            <li class="section-header"><h3>Lv. 100</h3></li>
-                            <div class="section-content">
-                                <ul>
-                                    <li><a href="ultimate/fru.html">Futures Rewritten (FRU)<span class="link-arrow"> →</span></a></li>
-                                </ul>
-                            </div>
-                        </ul>
+                        </div>
                     </div>
                     <div class="savage-section sections fights-menu" id="savage-section">
-                        <div class="header-container">
-                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
                             <h2 class="h2-section-header">Savage</h2>
                         </div>
-                        <ul class="section-links expandable">
-                            <li class="section-header"><h3>Lv. 100</h3></li>
+                        <div class="section-links expandable">
                             <div class="section-content">
                                 <ul>
-                                    <li><a href="savage/m1s.html">AAC Light-heavyweight M1 (Savage)<span class="link-arrow"> →</span></a></li>
-                                    <li><a href="savage/m2s.html">AAC Light-heavyweight M2 (Savage)<span class="link-arrow"> →</span></a></li>
-                                    <li><a href="savage/m3s.html">AAC Light-heavyweight M3 (Savage)<span class="link-arrow"> →</span></a></li>
-                                    <li><a href="savage/m4s.html">AAC Light-heavyweight M4 (Savage)<span class="link-arrow"> →</span></a></li>
+                                    <li><a href="savage/m1s.html">AAC Light-heavyweight M1 (Savage)</a></li>
+                                    <li><a href="savage/m2s.html">AAC Light-heavyweight M2 (Savage)</a></li>
+                                    <li><a href="savage/m3s.html">AAC Light-heavyweight M3 (Savage)</a></li>
+                                    <li><a href="savage/m4s.html">AAC Light-heavyweight M4 (Savage)</a></li>
+
+                                    <li style="margin-top: 1rem;"><a href="savage/m5s.html">AAC Cruiserweight M1 (Savage)</a></li>
+                                    <li><a href="savage/m6s.html">AAC Cruiserweight M2 (Savage)</a></li>
+                                    <li><a href="savage/m7s.html">AAC Cruiserweight M3 (Savage)</a></li>
+                                    <li><a href="savage/m8s.html">AAC Cruiserweight M4 (Savage)</a></li>
                                 </ul>
                             </div>
-                        </ul>
+                        </div>
                     </div>
                     <div class="extreme-section sections fights-menu" id="extreme-section">
-                        <div class="header-container">
-                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
                             <h2 class="h2-section-header">Extreme</h2>
                         </div>
-                        <ul class="section-links expandable">
-                            <li class="section-header"><h3>Lv. 100</h3></li>
+                        <div class="section-links expandable">
                             <div class="section-content">
                                 <ul>
-                                    <li><a href="extreme/ex1.html">Worqor Lar Dor (Extreme)<span class="link-arrow"> →</span></a></li>
-                                    <li><a href="extreme/ex2.html">Everkeep (Extreme)<span class="link-arrow"> →</span></a></li>
-                                    <li><a href="extreme/ex3.html">The Minstrel's Ballad: Sphene's Burden<span class="link-arrow"> →</span></a></li>
+                                    <li><a href="extreme/ex1.html">Worqor Lar Dor (Extreme)</a></li>
+                                    <li><a href="extreme/ex2.html">Everkeep (Extreme)</a></li>
+                                    <li><a href="extreme/ex3.html">The Minstrel's Ballad: Sphene's Burden</a></li>
                                 </ul>
                             </div>
-                        </ul>
+                        </div>
                     </div>
                     <div class="unreal-section sections fights-menu" id="unreal-section">
-                        <div class="header-container">
-                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
                             <h2 class="h2-section-header">Unreal</h2>
                         </div>
-                        <ul class="section-links expandable">
-                            <li class="section-header"><h3>Lv. 100</h3></li>
+                        <div class="section-links expandable">
                             <div class="section-content">
                                 <ul>
-                                    <li><a href="unreal/byakko.html">The Jade Stoa (Unreal)<span class="link-arrow"> →</span></a></li>
-                                    <li><a href="unreal/suzaku.html">Hells' Kier (Unreal)<span class="link-arrow"> →</span></a></li>
+                                    <li><a href="unreal/byakko.html">The Jade Stoa (Unreal)</a></li>
+                                    <li><a href="unreal/suzaku.html">Hells' Kier (Unreal)</a></li>
                                 </ul>
                             </div>
-                        </ul>
+                        </div>
                     </div>
                     <div class="chaotic-raid-section sections fights-menu" id="chaotic-raid-section">
-                        <div class="header-container">
-                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
                             <h2 class="h2-section-header">Chaotic</h2>
                         </div>
-                        <ul class="section-links expandable">
-                            <li class="section-header"><h3>Lv. 100</h3></li>
+                        <div class="section-links expandable">
                             <div class="section-content">
                                 <ul>
-                                    <li><a href="chaotic/cod.html">The Cloud of Darkness (Chaotic)<span class="link-arrow"> →</span></a></li>
+                                    <li><a href="chaotic/cod.html">The Cloud of Darkness (Chaotic)</a></li>
                                 </ul>
                             </div>
-                        </ul>
+                        </div>
                     </div>
                     <div class="criterion-section sections fights-menu" id="criterion-section">
-                        <div class="header-container">
-                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
                             <h2 class="h2-section-header">Criterion</h2>
                         </div>
-                        <ul class="section-links expandable">
-                            <li class="section-header"><h3>Lv. 90</h3></li>
+                        <div class="section-links expandable">
                             <div class="section-content">
                                 <ul>
-                                    <li><a href="criterion/crit1.html">Another Sil'dihn Subterrane<span class="link-arrow"> →</span></a></li>
-                                    <li><a href="criterion/crit2.html">Another Mount Rokkon<span class="link-arrow"> →</span></a></li>
-                                    <li><a href="criterion/crit3.html">Another Aloalo Island<span class="link-arrow"> →</span></a></li>
+                                    <li><a href="criterion/crit1.html">Another Sil'dihn Subterrane</a></li>
+                                    <li><a href="criterion/crit2.html">Another Mount Rokkon</a></li>
+                                    <li><a href="criterion/crit3.html">Another Aloalo Island</a></li>
                                 </ul>
                             </div>
-                        </ul>
+                        </div>
                     </div>
-                <div class="fights">
-                    <a class="title-link" href="#ultimate">
-                        <h3 style="margin-top: 2rem;" class="phase-title" id="ultimate">Ultimate</h3>
+                </div>
+                <h4><a href="glossary.html">Glossary</a></h4>
+                <div class="shortcut-section sections" id="shortcut-section">
+                    <div class="concepts-section sections fights-menu" id="concepts-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
+                            <h2 class="h2-section-header">Concepts</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="#">Gear & Items</a></li>
+                                    <li><a href="#">Mechanics</a></li>
+                                    <li><a href="#">Markers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="savage-section sections fights-menu" id="savage-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
+                            <h2 class="h2-section-header">Terminology</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="#">Technical</a></li>
+                                    <li><a href="#">Common Slang</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="main-content fights-page-menu">
+                <h1 class="main-title">Duty <span class="doc-span">Documentation</span></h1> 
+                <article style="margin-top: 2rem;" class="duty-article">
+                    <a href="#introduction" class="title-link">
+                        <h3 class="phase-title" id="introduction">Introduction</h3>
+                    </a>
+                    <p class="compact-text">Final Fantasy XIV offers a wide spectrum of combat duties, each tailored to different levels of player commitment, skill, and coordination. From casual story dungeons to high-stakes, high-reward raids, every tier of content has its own flavor and its own expectations.</p>
+                    <p class="compact-text">This page is dedicated to breaking down the more challenging end of that spectrum. Here, you'll find an overview of the duties that go beyond the basics. Content that demands awareness, study, and, in some cases, serious group coordination.</p>
+                    <p class="compact-text">Whether you're just starting with your first Extreme trial, progressing through the Savage tier, or starting an Ultimate progression and regretting your life decisions, it's important to know what you're getting into. Not just in terms of mechanics, but in the <strong>mindset</strong> <em>and</em> <strong>time</strong>  required to approach each difficulty tier.</p>
+                    <p class="compact-text">This page is not about teaching individual fights, it's here to give you the context. What makes each difficulty different? What level of prep should you expect? When does gear start to matter more? How much communication and teamwork is typically required?</p>
+                    <p class="compact-text">As you scroll down, you'll find summaries for each type of high-end duty: from the punishing Ultimate raids to the unique structure of Criterion Dungeons, and everything in between. Consider this your roadmap to endgame content: <strong>what to expect, how it plays, and how hard it can be</strong>.</p>
+                    <p class="compact-text"><strong>Let's start from the top</strong>.</p>
+
+                    <a style="margin-top: 1rem;" class="title-link" href="#ultimate">
+                        <h3 class="phase-title" id="ultimate">Ultimate</h3>
                     </a>
                     <p class="compact-text">By far, the hardest content in the game. Very fast paced and <a href="" class="text-link">unforgiving</a>. Requires absolute studying and preparation before meeting up with a premade <a href="" class="text-link">static</a> or <a href="" class="text-link">party finder</a> progging. As usual it requires <a href="" class="text-link">bis</a> <em>if</em> <a href="" class="text-link">current</a>, but if it is an older fight it is doable with any gear at the proper level. Mostly because new food and pots make the <a class="text-link" href="">dps checks</a> easier and easier as the years go by. Its typical and preferred composition is: Two tanks, two healers, two melee, one physical ranged, one caster.</p>
+                    <p class="compact-text">This can take from <strong>1 week up to 4 months</strong> of prog time or more! It really depends on the duty and the team. Older Ultimates can be done fairly quickly since you're standing on the shoulders of giants who already figured out everything for you. Not to mention dps checks not nearly as hard as when such encounter was released.</p>
+                    <p class="compact-text">The more recent the Ultimate encounter though, the harder it will be. You will have fewer resources and a lot less <a href="" class="text-link">job flexibility</a>. Often times having to play jobs you might not originally want to. This happens because these fights have such tight dps checks, that your entire group is forced to play the current jobs with the most dps in the game, supports included (These jobs change from patch to patch depending on their balancing). This lack of job flexibility only really happens when an Ultimate <strong>just</strong> came out though. So if you're running anything older than that, you probably won't have to worry about <a href="" class="text-link">composition</a> as much.</p>
 
                     <a class="title-link" href="#savage">
-                        <h3 style="margin-top: 2rem;" class="phase-title" id="savage">Savage</h3>
+                        <h3 class="phase-title" id="savage">Savage</h3>
                     </a>
-                    <p class="compact-text">The standard endgame that most players <a href="" class="text-link">run</a>. Considered to be <a href="" class="text-link">mid-core</a> to <a href="" class="text-link">semi-hardcore</a>, it is probably the most relevant endgame content, due to the fact that it gives the best gear, although not the most difficult. Does not require <a href="" class="text-link">bis</a> to be ran, making latest crafted gear, enough to start. Can become easier overtime with better gear, which is not the case for <a href="" class="text-link">current</a> Ultimates on their first release. </p>
+                    <p class="compact-text">The standard endgame that most players <a href="" class="text-link">run</a>. Considered to be <a href="" class="text-link">midcore</a> to <a href="" class="text-link">semi-hardcore</a>, it is probably the most relevant endgame content, due to the fact that it gives the best gear, although not the most difficult. Does not require <a href="" class="text-link">bis</a> to be ran, making latest crafted gear, enough to start. Can become easier overtime with better gear, which is not the case for <a href="" class="text-link">current</a> Ultimates on their first release. A savage tier can take from around 1 Week up to 2-4 months of progression depending on the group and the tier's difficulty.</p>
+                    <p class="compact-text"><strong>NOTE:</strong> Have in mind that for any Savage tier, after finishing it, you will have to do <em>at least</em> 7 more weeks of <a href="" class="text-link">reclears</a>, to guarantee everyone's bis and mounts. Some groups will do 9 weeks of reclears for the 10 savage clears achievement. So that means: however many days or weeks it took to clear the final 4th fight of a tier, that is clear 1. Then you need 7 or 9 more clears to total 8 - 10 total clears (Each clear can only be done once a week).</p>
+                    <h4 style="font-size: 1.1rem">Goals and commitment</h4>
+                    <p class="compact-text">Savage can be fun. But it really depends on how you tackle it, just like the rest of the game. The number one goal of running endgame content is to find like-minded people to party with. Otherwise you may have endless conflicts of interest and it turns into a mess in no time. For example, you might want to finish the current Savage tier on Week 1. This is something that will most likely require: Raiding every single day, possibly running the fights for 6-8 hours a day, showing up ready with everything you need, not just gear, but knowledge from the encounter. This depends from tier to tier! Some Savage tiers are a lot easier than others and require not as much time. But having the mindset and the expectation of what's to come can help you ensure you get that Week 1 clear.</p>
+                    <h4 style="font-size: 1.1rem;">Why does this matter?</h4>
+                    <p class="compact-text">You might make a group with 6 people that are absolutely willing to go that far with you and finish the fights as soon as possible. But then, due to not having enough time to <a href="" class="title-link">trial</a> people or more carefully recruit, you end up having the one guy who is a little more relaxed or simply doesn't have the time to run as many days and hours. This causes the whole group to resent the guy, because he doesn't think the same way as the rest of the group. A lot of players would say this guy should have never joined in the first place. So be careful with who you let join your group! Carefully analyze not only their skill level and past experience, but also their willingless to stick around and do what the group needs.</p>
+                    <p class="compact-text">This can also happen the opposite way! You might make a chill midcore group that runs 3-4 days a week, 3 hours a day. With the goal of clearing on week 3-4 (Which by the way, is the most common approach most players take). But you might have someone in your group who wants to push for faster clears. Depending on the person they might take matters into their own hands. Possibly progging without the group in party finder, risking even clearing without the rest of the group, which causes you to get only 1 chest on clear, instead of 2. This drastically delays gear progression, in turn, making raid progression also slower. All because one guy couldn't respect the group's wishes. So again, I can't stress this enough, get to know the people you plan to raid with and their goals, before you put yourself in tricky situations.</p>
 
                     <a class="title-link" href="#extreme">
-                        <h3 style="margin-top: 2rem;" class="phase-title" id="extreme">Extreme</h3>
+                        <h3 class="phase-title" id="extreme">Extreme</h3>
                     </a>
                     <p class="compact-text">The entry point for every player seeking to start running endgame content. Most likely the most recommended <a href="" class="text-link">duty</a> to begin with after reaching max level. It will teach you mechanics, awareness, and you probably won't be able to clear without some minimal studying. Which gets you used to studying for <a href="" class="text-link">encounters</a>. These can become a lot easier with more gear!</p> 
 
                     <a class="title-link" href="#unreal">
-                        <h3 style="margin-top: 2rem;" class="phase-title" id="unreal">Unreal</h3>
+                        <h3 class="phase-title" id="unreal">Unreal</h3>
                     </a>
-                    <p class="compact-text">Unreals are basically older Extremes brought back to relevancy by making us do them on current level. By using our current skill set, the fights become harder as you have more complex <a href="" class="text-link">rotations</a>. But unlike current extremes, everything is <a href="" class="text-link">ilvl-synced</a> and gear does not matter at all. So if an Unreal fight has a really tight <a href="" class="text-link">dps check</a>, it always will. Meaning this fight will always be hard to clear, until the next Unreal comes out, and no one can ever run that one anymore.</p>    
+                    <p class="compact-text">Unreals are basically older Extremes brought back to relevancy by making us do them on current level. By using our current skill set, the fights become harder as you have more complex <a href="" class="text-link">rotations</a>. But unlike current extremes, everything is <a href="" class="text-link">ilvl-synced</a> towards gear of the beginning of the expansion, so gear does not matter past said <a href="" class="text-link">ilvl</a>. So if an Unreal fight has a really tight <a href="" class="text-link">dps check</a>, it always will. Meaning this fight will always be hard to clear, until the next Unreal comes out, and no one can ever run that one anymore.</p>    
 
                     <a class="title-link" href="#chaotic">
-                        <h3 style="margin-top: 2rem;" class="phase-title" id="chaotic">Chaotic</h3>
+                        <h3 class="phase-title" id="chaotic">Chaotic</h3>
                     </a>
                     <p class="compact-text">An alliance raid with a <strong>single</strong> boss, but on <em>supposedly</em> savage difficulty level. It is ran by 3 alliance parties of 8 players each (24 total players). You could compare this to <strong>Baldesion Arsenal</strong> or  <strong>Delubrum Savage</strong>, but there is a lot more responsibility and tighter <a href="" class="text-link">dps checks</a>. Not to mention all you get is your pure kit, since you're not in an <a href="" class="text-link">exploration zone</a>, you have no access to actions or buffs that makes the raid easier.</p> 
 
                     <a class="title-link" href="#criterion">
-                        <h3 style="margin-top: 2rem;" class="phase-title" id="criterion">Criterion</h3>
+                        <h3 class="phase-title" id="criterion">Criterion</h3>
                     </a>
                     <p class="compact-text">A 4 player dungeon with 3 bosses at Extreme level difficulty. Can be a fun challenge to study through and get done with a group of friends. The only difference from normal criterion to savage, is that on savage once you die, you're gone for the rest of the run. Unlike its variant version, it is not a dungeon with free exploration and different paths, instead, very straightforward, single path, bosses are the same ones every time.</p>
 
-                </div>
+                </article>
                 <div class="bottom-nav-links">
                     <a href="../../index.html" class="back-link"><span class="back-arrow">←</span> Previous</a>
                     <a href="../../index.html" class="back-link" href="#" id="backToTop">Back to top <span class="back-arrow">↑</span></a>
@@ -188,6 +365,7 @@
             <div class="table-of-contents">
                 <h4>In this article</h4>
                 <div class="tb-content">
+                    <a class="resource" href="#introduction">Introduction</a>
                     <a class="resource" href="#ultimate">Ultimate</a>
                     <a class="resource" href="#savage">Savage</a>
                     <a class="resource" href="#extreme">Extreme</a>
@@ -212,6 +390,7 @@
         </footer>
     </div>
     <script type="module" src="../src/script.js"></script>
+    <script src="../src/hbmenu.js"></script>
     <script src="../src/toc/toc.js"></script>
 </body>
 </html>
