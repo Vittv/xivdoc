@@ -20,6 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Close dropdown when clicking outside
+document.addEventListener("click", function(event) {
+    const menu = document.getElementById("hb-dropdown");
+    const hamburger = document.querySelector(".hamburger");
+
+    // If the click is outside the menu and hamburger
+    if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+        menu.classList.remove("active");
+    }
+});
+
 // Handles back to top function
 enableSmoothScroll("backToTop");
+
 
