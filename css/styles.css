@@ -441,6 +441,7 @@ ul {
     font-weight: 700;
 }
 
+.title-link h4:hover,
 .title-link h3:hover,
 .title-link h2:hover {
     font-weight: 700;
@@ -459,18 +460,44 @@ ul {
     line-height: 1.8;
 }
 
+.fight-banner {
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    filter: saturate(150%);
+}
+
+/* Fade-out effect on edges */
+.fight-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0) 20%,
+        var(--primary-background-color) 90%
+    );
+}
+
 .strat-link {
     color: var(--text-link-color);
     font-weight: bold;
 }
 
 .strat-link:hover {
-    color: var(--main-text-hover-color);
-    border-bottom: 1px solid var(--main-text-hover-color);
+    color: var(--text-link-color);
+    text-decoration: underline;
 }
 
 .fight-title {
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .fight-title-description {
@@ -479,12 +506,12 @@ ul {
 
 .phase-title {
     margin-top: 1rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .extra-info-title {
     margin-top: 1rem;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .tiny-text {
@@ -502,6 +529,15 @@ ul {
     margin-bottom: 1rem;
 }
 
+li.compact-text {
+    margin-bottom: 0;
+}
+
+.compact-text-link {
+    font-size: 1.1rem;
+}
+
+.prepull-spots,
 li.prepull-spots {
     font-family: monospace;
 }
@@ -547,6 +583,7 @@ h5 {
 }
 
 .header-container {
+    margin-bottom: 0.5rem;
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -947,6 +984,10 @@ footer {
     .glossary-card {
         height: 13rem;
         width: 21rem;
+    }
+
+    .fight-banner {
+        height: 10rem;
     }
 
 }

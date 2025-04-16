@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="stylesheet" href="../../css/styles.css">
@@ -20,81 +23,359 @@
     <div class="page-wrapper">
         <div class="nav-bar-container">
             <div class="nav-bar">
-                <a class="nav-title" href="../../index.html">XIVDoc</a>
-                <button class="theme-toggle">
-                    <span id="theme-icon" class="material-icons-outlined">light_mode</span>
-                </button>
+                <div class="navbar-left">
+                    <a class="nav-title" href="../../index.html"><span style="color: var(--golden-text-color)">❈</span> <span class="red-text">XIV</span>Doc</a>
+                </div>
+                <div class="navbar-right">
+                    <button class="theme-toggle">
+                        <span id="theme-icon" class="material-icons-outlined">light_mode</span>
+                    </button>
+                    <div class="hamburger-container">
+                        <div class="hamburger" onclick="toggleMenu()">☰</div>
+                        <div class="hb-dropdown" id="hb-dropdown">
+                            <h4><a href="../duty.html">Duty</a></h4>
+                                <div style="border-color: var(--secondary-background-color);" class="shortcut-section sections" id="shortcut-section">
+                                    <div class="ultimate-section sections fights-menu" id="ultimate-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Ultimate</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="../ultimate/ucob.html">The Unending Coil of Bahamut (UCOB)</a></li>
+                                                    <li><a href="../ultimate/uwu.html">The Weapon's Refrain (UWU)</a></li>
+                                                    <li><a href="../ultimate/tea.html">The Epic of Alexander (TEA)</a></li>
+                                                    <li><a href="../ultimate/dsr.html">Dragonsong Reprise (DSR)</a></li>
+                                                    <li><a href="../ultimate/top.html">The Omega Protocol (TOP)</a></li>
+                                                    <li><a href="../ultimate/fru.html">Futures Rewritten (FRU)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="savage-section sections fights-menu" id="savage-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Savage</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="../savage/m1s.html">AAC Light-heavyweight M1 (Savage)</a></li>
+                                                    <li><a href="../savage/m2s.html">AAC Light-heavyweight M2 (Savage)</a></li>
+                                                    <li><a href="../savage/m3s.html">AAC Light-heavyweight M3 (Savage)</a></li>
+                                                    <li><a href="../savage/m4s.html">AAC Light-heavyweight M4 (Savage)</a></li>
+
+                                                    <li style="margin-top: 1rem;"><a href="savage/m5s.html">AAC Cruiserweight M1 (Savage)</a></li>
+                                                    <li><a href="../savage/m6s.html">AAC Cruiserweight M2 (Savage)</a></li>
+                                                    <li><a href="../savage/m7s.html">AAC Cruiserweight M3 (Savage)</a></li>
+                                                    <li><a href="../savage/m8s.html">AAC Cruiserweight M4 (Savage)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="extreme-section sections fights-menu" id="extreme-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Extreme</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="../extreme/ex1.html">Worqor Lar Dor (Extreme)</a></li>
+                                                    <li><a href="../extreme/ex2.html">Everkeep (Extreme)</a></li>
+                                                    <li><a href="../extreme/ex3.html">The Minstrel's Ballad: Sphene's Burden</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="unreal-section sections fights-menu" id="unreal-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Unreal</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="../unreal/byakko.html">The Jade Stoa (Unreal)</a></li>
+                                                    <li><a href="../unreal/suzaku.html">Hells' Kier (Unreal)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chaotic-raid-section sections fights-menu" id="chaotic-raid-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Chaotic</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="../chaotic/cod.html">The Cloud of Darkness (Chaotic)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="criterion-section sections fights-menu" id="criterion-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Criterion</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="../criterion/crit1.html">Another Sil'dihn Subterrane</a></li>
+                                                    <li><a href="../criterion/crit2.html">Another Mount Rokkon</a></li>
+                                                    <li><a href="../criterion/crit3.html">Another Aloalo Island</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4><a href="..glossary.html">Glossary</a></h4>
+                                <div style="border-color: var(--secondary-background-color);" class="shortcut-section sections" id="shortcut-section">
+                                    <div class="concepts-section sections fights-menu" id="concepts-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Concepts</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="#">Gear & Items</a></li>
+                                                    <li><a href="#">Mechanics</a></li>
+                                                    <li><a href="#">Markers</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="savage-section sections fights-menu" id="savage-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Terminology</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="#">Technical</a></li>
+                                                    <li><a href="#">Common Slang</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>                                
+                             </div>         
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container">
             <div class="sidebar">
-                <h4>Content</h4>
+                <h4><a href="duty.html">Duty</a></h4>
                 <div class="shortcut-section sections" id="shortcut-section">
-                    <h2 class="h2-section-header left-sidebar-title"><a href="../fights.html">&bull; Fights</a></h2>
-                    <h2 class="h2-section-header left-sidebar-title"><a href="../concepts.html">&bull; Concepts</a></h2>
+                    <div class="ultimate-section sections fights-menu" id="ultimate-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
+                            <h2 class="h2-section-header">Ultimate</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="../ultimate/ucob.html">The Unending Coil of Bahamut (UCOB)</a></li>
+                                    <li><a href="../ultimate/uwu.html">The Weapon's Refrain (UWU)</a></li>
+                                    <li><a href="../ultimate/tea.html">The Epic of Alexander (TEA)</a></li>
+                                    <li><a href="../ultimate/dsr.html">Dragonsong Reprise (DSR)</a></li>
+                                    <li><a href="../ultimate/top.html">The Omega Protocol (TOP)</a></li>
+                                    <li><a href="../ultimate/fru.html">Futures Rewritten (FRU)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="savage-section sections fights-menu" id="savage-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
+                            <h2 class="h2-section-header">Savage</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="../savage/m1s.html">AAC Light-heavyweight M1 (Savage)</a></li>
+                                    <li><a href="../savage/m2s.html">AAC Light-heavyweight M2 (Savage)</a></li>
+                                    <li><a href="../savage/m3s.html">AAC Light-heavyweight M3 (Savage)</a></li>
+                                    <li><a href="../savage/m4s.html">AAC Light-heavyweight M4 (Savage)</a></li>
+
+                                    <li style="margin-top: 1rem;"><a href="../savage/m5s.html">AAC Cruiserweight M1 (Savage)</a></li>
+                                    <li><a href="../savage/m6s.html">AAC Cruiserweight M2 (Savage)</a></li>
+                                    <li><a href="../savage/m7s.html">AAC Cruiserweight M3 (Savage)</a></li>
+                                    <li><a href="../savage/m8s.html">AAC Cruiserweight M4 (Savage)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="extreme-section sections fights-menu" id="extreme-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
+                            <h2 class="h2-section-header">Extreme</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="../extreme/ex1.html">Worqor Lar Dor (Extreme)</a></li>
+                                    <li><a href="../extreme/ex2.html">Everkeep (Extreme)</a></li>
+                                    <li><a href="../extreme/ex3.html">The Minstrel's Ballad: Sphene's Burden</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="unreal-section sections fights-menu" id="unreal-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
+                            <h2 class="h2-section-header">Unreal</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="../unreal/byakko.html">The Jade Stoa (Unreal)</a></li>
+                                    <li><a href="../unreal/suzaku.html">Hells' Kier (Unreal)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chaotic-raid-section sections fights-menu" id="chaotic-raid-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
+                            <h2 class="h2-section-header">Chaotic</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="../chaotic/cod.html">The Cloud of Darkness (Chaotic)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="criterion-section sections fights-menu" id="criterion-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
+                            <h2 class="h2-section-header">Criterion</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="../criterion/crit1.html">Another Sil'dihn Subterrane</a></li>
+                                    <li><a href="../criterion/crit2.html">Another Mount Rokkon</a></li>
+                                    <li><a href="../criterion/crit3.html">Another Aloalo Island</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4><a href="glossary.html">Glossary</a></h4>
+                <div class="shortcut-section sections" id="shortcut-section">
+                    <div class="concepts-section sections fights-menu" id="concepts-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
+                            <h2 class="h2-section-header">Concepts</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="#">Gear & Items</a></li>
+                                    <li><a href="#">Mechanics</a></li>
+                                    <li><a href="#">Markers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="savage-section sections fights-menu" id="savage-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▾</span>
+                            <h2 class="h2-section-header">Terminology</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="#">Technical</a></li>
+                                    <li><a href="#">Common Slang</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             <div class="main-content">
                 <h1 class="fight-title">The Unending Coil of Bahamut</h1>
                 <div class="ucob-section sections fight-sections" id="ucob-section">
-                    <h2 id="p1" class="phase-title"><a href="#p1" class="section-permalink">#</a> P1: Twintania</h2>
-                    <ul class="section-links">
-                        <li>. Neurolink placement - Normal triangle: N, SW, SE (CCW, on 123 markers)</li>
-                        <li>. Both tanks and 1 healer (discuss) stay out of first stack for LB cheese</li>
-                        <li>. Phys. range always baits liquid hells, caster takes hatch if phys. range is first hatch</li>
-                    </ul>
-                    <h2 id="p2" class="phase-title"><a href="#p2" class="section-permalink">#</a> P2: Nael</h2>
-                    <ul class="section-links">
-                        <li>. Party rotates CW around boss by default</li>
-                        <li>. Fire order: In > Out > In (2nd fire tether person out) > In</li>
-                        <li>. Divebombs: <a href="https://raidplan.io/plan/vi2rSC6mwW_d_QJF" target="_blank" rel="noreferrer noopener" class="strat-link">https://raidplan.io/plan/vi2rSC6mwW_d_QJF<span class="link-arrow"> →</span></a></li>
-                    </ul>
-                    <h2 id="p3" class="phase-title"><a href="#p3" class="section-permalink">#</a> P3: Bahamut Prime</h2>
-                    <ul class="section-links">
-                        <li>. QMT - Uptime Quickmarch: <a href="https://raidplan.io/plan/3zSKK0DXeJgCLadx" target="_blank" rel="noreferrer noopener" class="strat-link">https://raidplan.io/plan/3zSKK0DXeJgCLadx<span class="link-arrow"> →</span></a></li>
-                        <li>. BFT - DPS CCW, support CW: <a href="https://raidplan.io/plan/BJPnHRQMEsmOyapB" target="_blank" rel="noreferrer noopener" class="strat-link">https://raidplan.io/plan/BJPnHRQMEsmOyapB<span class="link-arrow"> →</span></a></li>
-                        <li>. FRT - Party neuro opposite of Bahamut: <a href="https://raidplan.io/plan/-83d6AilbZGqba3j" target="_blank" rel="noreferrer noopener" class="strat-link">https://raidplan.io/plan/-83d6AilbZGqba3j<span class="link-arrow"> →</span></a></li>
-                        <li>. HFT - R1 tower under Nael: <a href="https://raidplan.io/plan/NGpZ9S-3kiLsDzAY" target="_blank" rel="noreferrer noopener" class="strat-link">https://raidplan.io/plan/NGpZ9S-3kiLsDzAY<span class="link-arrow"> →</span></a></li>
-                        <li>. TST - Jump if convering hatch: <a href="https://raidplan.io/plan/2wu2LOy8wKhG29Tr" target="_blank" rel="noreferrer noopener" class="strat-link">https://raidplan.io/plan/2wu2LOy8wKhG29Tr<span class="link-arrow"> →</span></a></li>
-                        <li>> 1 always safe for Earthshakers</li>
-                        <li>. GO  - Tank LB3: <a href="https://raidplan.io/plan/iunTUxGNwjAGF_7K" target="_blank" rel="noreferrer noopener" class="strat-link">https://raidplan.io/plan/iunTUxGNwjAGF_7K<span class="link-arrow"> →</span></a></li>
-                        <li>> If no tank LB3 bait twin CCW (left) and stack CW of twin (right)</li>
-                    </ul>
-                    <h2 id="adds" class="phase-title"><a href="#adds" class="section-permalink">#</a> Adds</h2>
-                    <ul class="section-links">
-                        <li><a href="https://raidplan.io/plan/AMEhnLbUmlTb7ij3" target="_blank" rel="noreferrer noopener" class="strat-link">https://raidplan.io/plan/AMEhnLbUmlTb7ij3<span class="link-arrow"> →</span></a></li>
-                    </ul>
-                    <h2 id="p4" class="phase-title"><a href="#p4" class="section-permalink">#</a> P4: Golden Bahamut</h2></h2>
-                    <ul class="section-links">
-                        <li>. 60s/90s CD AoE mit - Either Morn Afahs 1/3/5 or 2/4</li>
-                        <li>. 2m CD AoE mit - Either Morn Afahs 1/4 or 2/5</li>
-                        <li>. Discuss with co-tank/melee/caster which Morn Afahs to mit</li>
-                        <li>. NO tank LBs in default mit plan unless it's an emergency (e.g <8 person stack or invuln not up)</li>
-                    </ul>
-                    <h3 id="markers" class="extra-info-title"><a href="#markers" class="section-permalink resources">#</a> Markers (Waymark Preset Plugin)</h3>
-                    <ul class="section-links">
-                        <li>{"Name":"good aether markers","MapID":280,"A":{"X":20.986,"Y":0.0,"Z":-11.02,"ID":0,"Active":true},"B":{"X":9.315,"Y":0.0,"Z":21.971,"ID":1,"Active":true},"C":{"X":-19.999,"Y":0.0,"Z":11.772,"ID":2,"Active":true},"D":{"X":0.0,"Y":0.0,"Z":9.0,"ID":3,"Active":true},"One":{"X":0.0,"Y":0.0,"Z":-8.0,"ID":4,"Active":true},"Two":{"X":-8.0,"Y":0.0,"Z":5.0,"ID":5,"Active":true},"Three":{"X":8.0,"Y":0.0,"Z":5.0,"ID":6,"Active":true},"Four":{"X":0.0,"Y":0.0,"Z":0.0,"ID":7,"Active":true}}</li>
-                        <li>-</li>
-                        <li>{"Name":"aether pf","MapID":280,"A":{"X":20.909,"Y":0.0,"Z":-11.182,"ID":0,"Active":true},"B":{"X":7.807,"Y":0.0,"Z":21.795,"ID":1,"Active":true},"C":{"X":-21.84,"Y":0.0,"Z":8.076,"ID":2,"Active":true},"D":{"X":5.03,"Y":0.0,"Z":-2.578,"ID":3,"Active":true},"One":{"X":0.122,"Y":0.0,"Z":-6.96,"ID":4,"Active":true},"Two":{"X":-7.505,"Y":0.0,"Z":5.109,"ID":5,"Active":true},"Three":{"X":7.947,"Y":0.0,"Z":5.375,"ID":6,"Active":true},"Four":{"X":0.21,"Y":0.0,"Z":8.838,"ID":7,"Active":true}}</li>
-                    </ul>
-                    <h3 id="prepull-setup" class="extra-info-title"><a href="#prepull-setup" class="section-permalink resources">#</a> Prepull setup</h3>
-                    <ul class="section-links">
-                        <li>2 light parties in a line, designated as left or right</li>
-                        <li>-</li>
-                        <li>L1 | R1  (tanks)</li>
-                        <li>L2 | R2  (healers)</li>
-                        <li>L3 | R3  (melee)</li>
-                        <li>L4 | R4  (ranged) </li>
-                    </ul>
-                    <h3 id="unlock" class="extra-info-title"><a href="#unlock" class="section-permalink resources">#</a> Unlock</h3>
-                    <ul class="section-links">
-                        <li><a href="https://ffxiv.consolegameswiki.com/wiki/The_Unending_Coil_of_Bahamut_(Ultimate)#Unlock_and_Requirements" target="_blank" rel="noreferrer noopener" class="strat-link">https://ffxiv.consolegameswiki.com/wiki/The_Unending_Coil_of_Bahamut_(Ultimate)#Unlock_and_Requirements<span class="link-arrow"> →</span></a></li>
-                    </ul>
-                    <h4 id="additional-resources" class="extra-info-title"><a href="#additional-resources" class="section-permalink resources">#</a> Additional Resources</h4>
-                    <ul class="section-links">
-                        <li><a href="https://www.youtube.com/watch?v=EG9NxD6bxWs" target="_blank" rel="noreferrer noopener" class="strat-link">Tessan Twintails Guide<span class="link-arrow"> →</span></a></li>
-                        <li><a href="https://www.youtube.com/playlist?list=PLojSzO6hHRKR4T4PziQzhTIf25XLGQDGw" target="_blank" rel="noreferrer noopener" class="strat-link">Hector Hectorson Guide<span class="link-arrow"> →</span></a></li>
-                    </ul>
+                    <div class="fight-banner" data-banner="ucob.webp"></div>
+                    <a href="#p1" class="title-link">
+                        <h2 id="p1" class="phase-title">P1: Twintania</h2>
+                    </a>
+                        <p class="compact-text">&bull; Neurolink placement - Normal triangle: <strong>N</strong>, <strong>SW</strong>, <strong>SE</strong> (<a href="" class="text-link">CCW</a>, on 123 markers)</p>
+                        <p class="compact-text">&bull; Both tanks and 1 healer (discuss) stay out of first stack for LB cheese</p>
+                        <p class="compact-text">&bull; Phys. range <strong>always</strong> baits liquid hells, <strong>caster</strong> takes hatch if phys. range is first hatch</p>
+                    <a href="#p2" class="title-link">
+                        <h2 id="p2" class="phase-title">P2: Nael</h2>
+                    </a>
+                        <p class="compact-text">&bull; Party rotates CW around boss by default</p>
+                        <p class="compact-text">&bull; Fire order: In > Out > In (<strong>2nd fire tether person out</strong>) > In</p>
+                        <p class="compact-text">&bull; Divebombs: <a href="https://raidplan.io/plan/vi2rSC6mwW_d_QJF" target="_blank" rel="noreferrer noopener" class="strat-link">raidplan<span class="link-arrow"> →</span></a></p>
+                    <a href="#p3" class="title-link">
+                        <h2 id="p3" class="phase-title">P3: Bahamut Prime</h2>
+                    </a>
+                        <p class="compact-text">&bull; QMT - Uptime Quickmarch: <a href="https://raidplan.io/plan/3zSKK0DXeJgCLadx" target="_blank" rel="noreferrer noopener" class="strat-link">QMT raidplan<span class="link-arrow"> →</span></a></p>
+                        <p class="compact-text">&bull; BFT - DPS CCW, support CW: <a href="https://raidplan.io/plan/BJPnHRQMEsmOyapB" target="_blank" rel="noreferrer noopener" class="strat-link">BFT raidplan<span class="link-arrow"> →</span></a></p>
+                        <p class="compact-text">&bull; FRT - Party neuro opposite of Bahamut: <a href="https://raidplan.io/plan/-83d6AilbZGqba3j" target="_blank" rel="noreferrer noopener" class="strat-link">FRT raidplan<span class="link-arrow"> →</span></a></p>
+                        <p class="compact-text">&bull; HFT - R1 tower under Nael: <a href="https://raidplan.io/plan/NGpZ9S-3kiLsDzAY" target="_blank" rel="noreferrer noopener" class="strat-link">HFT raidplan<span class="link-arrow"> →</span></a></p>
+                        <p class="compact-text">&bull; TST - Jump if convering hatch: <a href="https://raidplan.io/plan/2wu2LOy8wKhG29Tr" target="_blank" rel="noreferrer noopener" class="strat-link">TST raidplan<span class="link-arrow"> →</span></a></p>
+                        <p class="compact-text">> 1 always safe for Earthshakers</p>
+                        <p class="compact-text">&bull; GO  - Tank LB3: <a href="https://raidplan.io/plan/iunTUxGNwjAGF_7K" target="_blank" rel="noreferrer noopener" class="strat-link">raidplan<span class="link-arrow"> →</span></a></p>
+                        <p class="compact-text">> If no tank LB3 bait twin CCW (left) and stack CW of twin (right)</p>
+                    <a href="#adds" class="title-link">
+                        <h2 id="adds" class="phase-title">Adds</h2>
+                    </a>
+                    <div class="section-links">
+                        <p class="compact-text">&bull; <a href="https://raidplan.io/plan/AMEhnLbUmlTb7ij3" target="_blank" rel="noreferrer noopener" class="strat-link">Adds raidplan<span class="link-arrow"> →</span></a></p>
+                    </div>
+                    <a href="#p4" class="title-link">
+                        <h2 id="p4" class="phase-title">P4: Golden Bahamut</h2>
+                    </a>
+                    <div class="section-links">
+                        <p class="compact-text">&bull; 60s/90s CD AoE mit - Either Morn Afahs 1/3/5 or 2/4</p>
+                        <p class="compact-text">&bull; 2m CD AoE mit - Either Morn Afahs 1/4 or 2/5</p>
+                        <p class="compact-text">&bull; Discuss with co-tank/melee/caster which Morn Afahs to mit</p>
+                        <p class="compact-text">&bull; NO tank LBs in default mit plan unless it's an emergency (e.g <8 person stack or invuln not up)</p>
+                    </div>
+                    <a href="" class="title-link">
+                        <h3 id="markers" class="extra-info-title">Markers (Waymark Preset Plugin)</h3>
+                    </a>
+                    <div class="section-links">
+                        <p class="compact-text">{"Name":"good aether markers","MapID":280,"A":{"X":20.986,"Y":0.0,"Z":-11.02,"ID":0,"Active":true},"B":{"X":9.315,"Y":0.0,"Z":21.971,"ID":1,"Active":true},"C":{"X":-19.999,"Y":0.0,"Z":11.772,"ID":2,"Active":true},"D":{"X":0.0,"Y":0.0,"Z":9.0,"ID":3,"Active":true},"One":{"X":0.0,"Y":0.0,"Z":-8.0,"ID":4,"Active":true},"Two":{"X":-8.0,"Y":0.0,"Z":5.0,"ID":5,"Active":true},"Three":{"X":8.0,"Y":0.0,"Z":5.0,"ID":6,"Active":true},"Four":{"X":0.0,"Y":0.0,"Z":0.0,"ID":7,"Active":true}}</p>
+                        <p class="compact-text">{"Name":"aether pf","MapID":280,"A":{"X":20.909,"Y":0.0,"Z":-11.182,"ID":0,"Active":true},"B":{"X":7.807,"Y":0.0,"Z":21.795,"ID":1,"Active":true},"C":{"X":-21.84,"Y":0.0,"Z":8.076,"ID":2,"Active":true},"D":{"X":5.03,"Y":0.0,"Z":-2.578,"ID":3,"Active":true},"One":{"X":0.122,"Y":0.0,"Z":-6.96,"ID":4,"Active":true},"Two":{"X":-7.505,"Y":0.0,"Z":5.109,"ID":5,"Active":true},"Three":{"X":7.947,"Y":0.0,"Z":5.375,"ID":6,"Active":true},"Four":{"X":0.21,"Y":0.0,"Z":8.838,"ID":7,"Active":true}}</p>
+                    </div>
+                    <a href="#prepull-setup" class="title-link">
+                        <h3 id="prepull-setup" class="extra-info-title">Prepull setup</h3>
+                    </a>
+                    <div class="section-links">
+                        <p class="compact-text">2 light parties in a line, designated as left or right</p>
+                        <p class="prepull-spots">MT &nbsp; OT</p>
+                        <p class="prepull-spots">H1 &nbsp; H2</p>
+                        <p class="prepull-spots">M1 &nbsp; M2</p>
+                        <p class="prepull-spots">R1 &nbsp; R2</p>
+                    </div>
+                    <a href="#unlock" class="title-link">
+                        <h3 id="unlock" class="extra-info-title">Unlock</h3>
+                    </a>
+                    <div class="section-links">
+                        <p class="compact-text"><a href="https://ffxiv.consolegameswiki.com/wiki/The_Unending_Coil_of_Bahamut_(Ultimate)#Unlock_and_Requirements" target="_blank" rel="noreferrer noopener" class="strat-link">ffxivconsolegameswiki<span class="link-arrow"> →</span></a></p>
+                    </div>
+                    <a href="#additional-resources" class="title-link">
+                        <h4 id="additional-resources" class="extra-info-title">Additional Resources</h4>
+                    </a>
+                    <div class="section-links">
+                        <p class="compact-text"><a href="https://www.youtube.com/watch?v=EG9NxD6bxWs" target="_blank" rel="noreferrer noopener" class="strat-link">Tessan Twintails Guide<span class="link-arrow"> →</span></a></p>
+                        <p class="compact-text"><a href="https://www.youtube.com/playlist?list=PLojSzO6hHRKR4T4PziQzhTIf25XLGQDGw" target="_blank" rel="noreferrer noopener" class="strat-link">Hector Hectorson Guide<span class="link-arrow"> →</span></a></p>
+                    </div>
                 </div>
                 <div class="bottom-nav-links">
                     <a href="../../index.html" class="back-link"><span class="back-arrow">←</span> Previous</a>

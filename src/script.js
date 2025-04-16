@@ -20,17 +20,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Close dropdown when clicking outside
+// Handle hamburger menu
+window.toggleMenu = function () {
+    const menu = document.getElementById("hb-dropdown");
+    if (menu) {
+        menu.classList.toggle("active");
+    }
+}
+
 document.addEventListener("click", function(event) {
     const menu = document.getElementById("hb-dropdown");
     const hamburger = document.querySelector(".hamburger");
 
-    // If the click is outside the menu and hamburger
-    if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+    if (menu && hamburger && !menu.contains(event.target) && !hamburger.contains(event.target)) {
         menu.classList.remove("active");
     }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const banner = document.querySelector(".fight-banner");
+    if (banner) {
+        const imageName = banner.dataset.banner;
+        banner.style.backgroundImage = `url(/assets/banner/${imageName})`;
+    }
+});
 // Handles back to top function
 enableSmoothScroll("backToTop");
 
