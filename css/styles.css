@@ -497,7 +497,7 @@ ul {
 }
 
 .fight-title {
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .fight-title-description {
@@ -507,11 +507,13 @@ ul {
 .phase-title {
     margin-top: 1rem;
     font-weight: 600;
+    font-size: 1.4rem;
 }
 
 .extra-info-title {
     margin-top: 1rem;
     font-weight: 600;
+    font-size: 1.2rem;
 }
 
 .tiny-text {

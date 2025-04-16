@@ -15,7 +15,7 @@ export function toggleDropdown(event) {
         if (arrow.querySelector("i")) {
             arrow.querySelector("i").classList.remove("rotated");
         } else {
-            arrow.textContent = "▾";
+            arrow.textContent = "▸";
         }
     } else {
         sectionLinks.style.maxHeight = sectionLinks.scrollHeight + "px";
@@ -24,7 +24,7 @@ export function toggleDropdown(event) {
         if (arrow.querySelector("i")) {
             arrow.querySelector("i").classList.add("rotated");
         } else {
-            arrow.textContent = "▴";
+            arrow.textContent = "▾";
         }
     }
 };
