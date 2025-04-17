@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("h2[id], h3[id]"); // Select headings
     const links = document.querySelectorAll(".tb-content a");
-    const firstSection = sections[0]; // First section (Phase 1)
+
+    // Only track the sections that are linked from .tb-content
+    const sections = Array.from(links)
+        .map(link => document.querySelector(link.getAttribute("href")))
+        .filter(section => section !== null);
+
+    const firstSection = sections[0];
     const firstLink = document.querySelector(`.tb-content a[href="#${firstSection.id}"]`);
 
     function setActiveLink(section) {
@@ -16,8 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const link = document.querySelector(`.tb-content a[href="#${id}"]`);
 
             if (link) {
-                // Determine the color based on the class of the link
-                let color = "transparent"; // Default if no color is found
+                let color = "transparent";
 
                 if (link.classList.contains("resource")) {
                     color = getComputedStyle(document.documentElement).getPropertyValue("--resource-permalink-color");
@@ -25,17 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     color = getComputedStyle(document.documentElement).getPropertyValue("--phase-permalink-color");
                 }
 
-                // Apply styles
                 link.style.borderLeftColor = color;
-                link.style.backgroundColor = `${color}60`; // Light version of the color
+                link.style.backgroundColor = `${color}60`;
                 link.style.fontWeight = 700;
             }
         }
     }
 
     function highlightCurrentSection() {
-        let scrollPosition = window.scrollY + 80; // Adjusted for navbar height
-        let activeSection = firstSection; // Default to Phase 1
+        let scrollPosition = window.scrollY + 80;
+        let activeSection = firstSection;
 
         sections.forEach(section => {
             if (scrollPosition >= section.offsetTop) {
@@ -46,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
         setActiveLink(activeSection);
     }
 
-    // Highlight Phase 1 immediately on page load
     requestAnimationFrame(() => highlightCurrentSection());
 
     window.addEventListener("scroll", highlightCurrentSection);

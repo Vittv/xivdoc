@@ -64,7 +64,7 @@
     --text-link-visited-color: #551a8b;
     --xiv-navtitle-color: rgb(125, 0, 0);
     --card-background-color: #e7e7e7;
-    --golden-text-color: #baa30f;
+    --golden-text-color: #cab212;
 }
 
 [data-theme="dark"] {
@@ -114,6 +114,10 @@
     scrollbar-track-color: var(--primary-background-color);
   }
   
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     display: flex;
@@ -474,7 +478,7 @@ ul {
 .fight-banner {
     position: relative;
     width: 100%;
-    height: 22rem;
+    height: 20rem;
     background-position: center;
     background-size: cover;
     overflow: hidden;
@@ -503,7 +507,6 @@ ul {
 }
 
 .strat-link:hover {
-    color: var(--text-link-color);
     text-decoration: underline;
 }
 
@@ -517,15 +520,15 @@ ul {
 
 .phase-title {
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-weight: 600;
     font-size: 1.6rem;
 }
 
 .mech-title {
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .extra-info-title {
