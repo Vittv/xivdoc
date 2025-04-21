@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const banner = document.querySelector(".fight-banner");
     if (banner) {
         const imageName = banner.dataset.banner;
-        banner.style.backgroundImage = `url(/assets/banner/${imageName})`;
+        banner.style.backgroundImage = `url(../../assets/banner/${imageName})`;
     }
 });
 // Handles back to top function
