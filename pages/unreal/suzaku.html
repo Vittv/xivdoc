@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="stylesheet" href="../../css/styles.css">
@@ -20,179 +23,467 @@
     <div class="page-wrapper">
         <div class="nav-bar-container">
             <div class="nav-bar">
-                <a class="nav-title" href="../../index.html">XIVDoc</a>
-                <button class="theme-toggle">
-                    <span id="theme-icon" class="material-icons-outlined">light_mode</span>
-                </button>
+                <div class="navbar-left">
+                    <a class="nav-title" href="../../index.html"><span style="color: var(--golden-text-color)">❈</span> <span class="red-text">XIV</span>Doc</a>
+                </div>
+                <div class="navbar-right">
+                    <button class="theme-toggle">
+                        <span id="theme-icon" class="material-icons-outlined">light_mode</span>
+                    </button>
+                    <div class="hamburger-container">
+                        <div class="hamburger" onclick="toggleMenu()">☰</div>
+                        <div class="hb-dropdown" id="hb-dropdown">
+                            <h4><a href="../duty.html">Duty</a></h4>
+                                <div style="border-color: var(--secondary-background-color);" class="shortcut-section sections" id="shortcut-section">
+                                    <div class="ultimate-section sections fights-menu" id="ultimate-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Ultimate</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="../ultimate/ucob.html">The Unending Coil of Bahamut (UCOB)</a></li>
+                                                    <li><a href="../ultimate/uwu.html">The Weapon's Refrain (UWU)</a></li>
+                                                    <li><a href="../ultimate/tea.html">The Epic of Alexander (TEA)</a></li>
+                                                    <li><a href="../ultimate/dsr.html">Dragonsong Reprise (DSR)</a></li>
+                                                    <li><a href="../ultimate/top.html">The Omega Protocol (TOP)</a></li>
+                                                    <li><a href="../ultimate/fru.html">Futures Rewritten (FRU)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="savage-section sections fights-menu" id="savage-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Savage</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="../savage/m1s.html">AAC Light-heavyweight M1 (Savage)</a></li>
+                                                    <li><a href="../savage/m2s.html">AAC Light-heavyweight M2 (Savage)</a></li>
+                                                    <li><a href="../savage/m3s.html">AAC Light-heavyweight M3 (Savage)</a></li>
+                                                    <li><a href="../savage/m4s.html">AAC Light-heavyweight M4 (Savage)</a></li>
+
+                                                    <li style="margin-top: 1rem;"><a href="savage/m5s.html">AAC Cruiserweight M1 (Savage)</a></li>
+                                                    <li><a href="../savage/m6s.html">AAC Cruiserweight M2 (Savage)</a></li>
+                                                    <li><a href="../savage/m7s.html">AAC Cruiserweight M3 (Savage)</a></li>
+                                                    <li><a href="../savage/m8s.html">AAC Cruiserweight M4 (Savage)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="extreme-section sections fights-menu" id="extreme-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Extreme</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="../extreme/ex1.html">Worqor Lar Dor (Extreme)</a></li>
+                                                    <li><a href="../extreme/ex2.html">Everkeep (Extreme)</a></li>
+                                                    <li><a href="../extreme/ex3.html">The Minstrel's Ballad: Sphene's Burden</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="unreal-section sections fights-menu" id="unreal-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Unreal</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="../unreal/byakko.html">The Jade Stoa (Unreal)</a></li>
+                                                    <li><a href="../unreal/suzaku.html">Hells' Kier (Unreal)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chaotic-raid-section sections fights-menu" id="chaotic-raid-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Chaotic</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="../chaotic/cod.html">The Cloud of Darkness (Chaotic)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="criterion-section sections fights-menu" id="criterion-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Criterion</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="../criterion/crit1.html">Another Sil'dihn Subterrane</a></li>
+                                                    <li><a href="../criterion/crit2.html">Another Mount Rokkon</a></li>
+                                                    <li><a href="../criterion/crit3.html">Another Aloalo Island</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4><a href="../glossary.html">Glossary</a></h4>
+                                <div style="border-color: var(--secondary-background-color);" class="shortcut-section sections" id="shortcut-section">
+                                    <div class="concepts-section sections fights-menu" id="concepts-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Concepts</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="#">Gear & Items</a></li>
+                                                    <li><a href="#">Mechanics</a></li>
+                                                    <li><a href="#">Markers</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="savage-section sections fights-menu" id="savage-section">
+                                        <div style="margin-bottom: 0.6rem;" class="header-container dropdown-menu simple-menu">
+                                            <span class="dropdown-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                            <h2 class="h2-section-header small-h2sh">Terminology</h2>
+                                        </div>
+                                        <div class="section-links expandable">
+                                            <div class="section-content">
+                                                <ul>
+                                                    <li><a href="#">Technical</a></li>
+                                                    <li><a href="#">Common Slang</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>                                
+                             </div>         
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container">
             <div class="sidebar">
-                <h4>Content</h4>
+                <h4><a href="../duty.html">Duty</a></h4>
                 <div class="shortcut-section sections" id="shortcut-section">
-                    <h2 class="h2-section-header left-sidebar-title"><a href="../fights.html">&bull; Fights</a></h2>
-                    <h2 class="h2-section-header left-sidebar-title"><a href="../concepts.html">&bull; Concepts</a></h2>
+                    <div class="ultimate-section sections fights-menu" id="ultimate-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▸</span>
+                            <h2 class="h2-section-header">Ultimate</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="../ultimate/ucob.html">The Unending Coil of Bahamut (UCOB)</a></li>
+                                    <li><a href="../ultimate/uwu.html">The Weapon's Refrain (UWU)</a></li>
+                                    <li><a href="../ultimate/tea.html">The Epic of Alexander (TEA)</a></li>
+                                    <li><a href="../ultimate/dsr.html">Dragonsong Reprise (DSR)</a></li>
+                                    <li><a href="../ultimate/top.html">The Omega Protocol (TOP)</a></li>
+                                    <li><a href="../ultimate/fru.html">Futures Rewritten (FRU)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="savage-section sections fights-menu" id="savage-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▸</span>
+                            <h2 class="h2-section-header">Savage</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="../savage/m1s.html">AAC Light-heavyweight M1 (Savage)</a></li>
+                                    <li><a href="../savage/m2s.html">AAC Light-heavyweight M2 (Savage)</a></li>
+                                    <li><a href="../savage/m3s.html">AAC Light-heavyweight M3 (Savage)</a></li>
+                                    <li><a href="../savage/m4s.html">AAC Light-heavyweight M4 (Savage)</a></li>
+
+                                    <li style="margin-top: 1rem;"><a href="../savage/m5s.html">AAC Cruiserweight M1 (Savage)</a></li>
+                                    <li><a href="../savage/m6s.html">AAC Cruiserweight M2 (Savage)</a></li>
+                                    <li><a href="../savage/m7s.html">AAC Cruiserweight M3 (Savage)</a></li>
+                                    <li><a href="../savage/m8s.html">AAC Cruiserweight M4 (Savage)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="extreme-section sections fights-menu" id="extreme-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▸</span>
+                            <h2 class="h2-section-header">Extreme</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="../extreme/ex1.html">Worqor Lar Dor (Extreme)</a></li>
+                                    <li><a href="../extreme/ex2.html">Everkeep (Extreme)</a></li>
+                                    <li><a href="../extreme/ex3.html">The Minstrel's Ballad: Sphene's Burden</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="unreal-section sections fights-menu" id="unreal-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▸</span>
+                            <h2 class="h2-section-header">Unreal</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="../unreal/byakko.html">The Jade Stoa (Unreal)</a></li>
+                                    <li><a href="../unreal/suzaku.html">Hells' Kier (Unreal)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chaotic-raid-section sections fights-menu" id="chaotic-raid-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▸</span>
+                            <h2 class="h2-section-header">Chaotic</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="../chaotic/cod.html">The Cloud of Darkness (Chaotic)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="criterion-section sections fights-menu" id="criterion-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▸</span>
+                            <h2 class="h2-section-header">Criterion</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="../criterion/crit1.html">Another Sil'dihn Subterrane</a></li>
+                                    <li><a href="../criterion/crit2.html">Another Mount Rokkon</a></li>
+                                    <li><a href="../criterion/crit3.html">Another Aloalo Island</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4><a href="../glossary.html">Glossary</a></h4>
+                <div class="shortcut-section sections" id="shortcut-section">
+                    <div class="concepts-section sections fights-menu" id="concepts-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▸</span>
+                            <h2 class="h2-section-header">Concepts</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="#">Gear & Items</a></li>
+                                    <li><a href="#">Mechanics</a></li>
+                                    <li><a href="#">Markers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="savage-section sections fights-menu" id="savage-section">
+                        <div class="header-container dropdown-menu simple-menu">
+                            <span class="dropdown-arrow tiny-arrow">▸</span>
+                            <h2 class="h2-section-header">Terminology</h2>
+                        </div>
+                        <div class="section-links expandable">
+                            <div class="section-content">
+                                <ul>
+                                    <li><a href="#">Technical</a></li>
+                                    <li><a href="#">Common Slang</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             <div class="main-content">
                 <h1 class="fight-title">Suzaku</h1>
                 <h3 class="fight-title-description">Hells' Kier (Unreal)</h3>
                 <div class="suzaku-section sections fight-sections" id="suzaku-section">
-                    <li class="tiny-text">Disclaimer: Unreal fights are the same as their Extreme versions but synced up to the current max level of the expansion. But even if they're the same fight, as the years go by, <strong>sometimes</strong>, the pf standard strats and resolutions can change. That usually involves ignoring a mechanic by resolving it with Tank LB as well as other methods. Have in mind that in order to unlock these fights, you only ever need to beat its normal mode and have unlocked Faux Hollows in Idyllshire.</li>
-                    <h2 id="phase1" class="phase-title"><a href="#phase1" class="section-permalink">#</a> Phase 1</h2>
-                    <ul class="section-links">
-                        <li class="compact-text"><span class="li-title">Screams of the Damned</span> - raid-wide</li>
-                        <h4 class="li-title">Rout</h4>
-                        <ul class="section-links">
-                            <li class="compact-text">- Suzaku charges at the center (straight-line AoE) and marks everyone with Rekindle (circular AoE)</li>
-                            <li class="compact-text">- Birds on the ground will revive if clipped by Rekindle. Spread to avoid both the charge and birds</li>
-                        </ul>
-                        <li class="compact-text"><span class="li-title">Fleeting Summer</span> - conal aoe</li>
-                        <li class="compact-text"><span class="li-title">Cremate</span> - magic TB</li>
-                        <h4 class="li-title">Phoenix Down</h4>
-                        <ul class="section-links">
-                            <li class="compact-text">(color-coded)</li>
-                            <li class="prepull-spots">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MT M1</li>
-                            <li>&nbsp;</li>
-                            <li class="prepull-spots">H1 R1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OT M2</li>
-                            <li>&nbsp;</li>
-                            <li style="margin-bottom: 1rem" class="prepull-spots">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H2 R2</li>
-                            <li class="compact-text">- Small and big feathers with big aoes will drop and all <strong>DPS</strong> will be marked with Rekindle (circular aoe)</li>
-                            <li class="compact-text">- Everyone kill the <strong>SMALL</strong> feathers on your positions before they explode</li>
-                            <li class="compact-text">- They can either be on cards or intercards</li>
-                            <li class="compact-text">- Each <strong>DPS</strong> will revive its own bird with Rekindle</li>
-                            <li class="compact-text">- Afterwards, everyone kills all revived birds ASAP</li>
-                        </ul>
-                        <li class="compact-text"><span class="li-title">Screams of the Damned</span> - raid-wide</li>
-                        <h4 class="li-title">Eternal Flame</h4>
-                        <ul class="section-links">
-                            <li class="compact-text">- 8 arrows will appear, grab a spot</li>
-                            <li class="compact-text">- then face the same direction as the arrow</li>
-                            <li class="compact-text">- orbs will come toward center, facing the correct direction will block it</li>
-                            <li class="compact-text">- if you do it correctly you get a damage up buff (10 total)</li>
-                            <ul class="section-links">
-                                <li class="tiny-text">The real goal here is to not let the orbs touch the center, as it will feed the boss and make it do more damage after this. By dancing and getting the buffs to ourselves, we not only get stronger, but avoid a catastrophe.</li>
-                            </ul>
-                        </ul>
-                        <h4 class="li-title">Scarlet Fever</h4>
-                        <ul class="section-links">
-                            <li class="compact-text"> - Big transition raid-wide (does more or less damage based on how many orbs were missed)</li>
-                        </ul>
-                    </ul>
-                    <h2 id="phase2" class="phase-title"><a href="#phase2" class="section-permalink">#</a> Phase 2</h2>
-                    <ul class="section-links">
-                        <li class="compact-text"><strong>(big hole on center)</strong></li>
-                        <li class="compact-text"><span class="li-title">Southron Star</span> - raid-wide</li>
-                        <h4 class="li-title">Mesmerizing Melody (Pull) or Ruthless Refrain (Push)</h4>
-                        <ul class="section-links">
-                            <li class="compact-text">- <strong>Mesmerizing Melody</strong> pulls everyone towards the center. Move <strong>AWAY</strong> to avoid falling at the center hole</li>
-                            <li class="compact-text">- <strong>Ruthless Refrain</strong> pushes everyone away. Stay <strong>CLOSE</strong> to avoid falling off the edge</li>
-                            <li class="compact-text">- anti-KB <strong>works</strong></li>
-                        </ul>
-                        <h4 class="li-title">Well of Flame</h4>
-                        <ul class="section-links">
-                            <li class="compact-text">- line aoe to random player</li>
-                            <li class="compact-text">- 4 players get aoe'd</li>
-                            <li class="compact-text">- after spreading, party stacks on marked healer at C</li>
-                        </ul>
-                        <h4 class="li-title">Phantom Flurry</h4>
-                        <ul class="section-links">
-                            <li class="compact-text">- TB that applies a vuln debuff and then a 180 frontal IK aoe</li>
-                            <li class="compact-text">- mit, OT vokes, waits for cleave, then goes north to keep boss in place</li>
-                        </ul>
-                        <h4 class="li-title">Runes</h4>
-                        <ul class="section-links">
-                            <li class="compact-text">- The arena will be divided by 4 quadrants: <strong>blue</strong>, <strong>black</strong>, <strong>yellow</strong>, <strong>purple</strong></li>
-                            <li class="compact-text">- 8 runes representing the quadrants will appear on one side</li>
-                            <li class="compact-text">- a fire bird will also appear and begin moving towards the runes (always CW)</li>
-                            <li class="compact-text">- whichever rune the bird touches will have its corresponding quadrant explode</li>
-                            <li class="compact-text">- there are 2 patterns per set here: <strong>1234 1234</strong> or <strong>1234 4321</strong></li>
-                            <li class="compact-text">- there are 2 types of movements: clockwise explosions or cross (X) explosions</li>
-                            <li class="compact-text">- just check where the bird is going and avoid that color</li>
-                        </ul>
-                        <li class="compact-text"><span class="li-title">Mesmerizing M or Ruthless R</span> - pull or push</li>
-                        <h4 class="li-title">Close-quarter Crescendo</h4>
-                        <ul class="section-links">
-                            <li class="compact-text">- everyone gets tethered to an orb in a cardinal</li>
-                            <li class="compact-text">- this orb will then force you to walk towards its direction</li>
-                            <li class="compact-text">- just position properly in order not to fall off the arena</li>
-                        </ul>
-                        <li class="compact-text"><span class="li-title">Well of Flame</span> - line aoe, 4 players marked, stack at C after</li>
-                        <li class="compact-text"><span class="li-title">Phantom Flurry</span> - 180 cleave TB, mit, OT vokes and takes MT spot</li>
-                        <h4 style="font-style: italic; font-size: 1.2rem;" class="li-title">(Runes start happening along with mechanics)</h4>
-                        <h4 class="li-title">Runes</h4>
-                        <ul class="section-links">
-                            <li class="compact-text"><strong>MM or RR</strong> - pull or push</li>
-                            <li class="compact-text"><strong>Southron Star</strong> - raid-wide</li>
-                        </ul>
-                        <li class="compact-text"><span class="li-title">Phantom Flurry</span> - 180 cleave TB, mit, OT vokes and takes MT spot</li>
-                        <li class="compact-text"><span class="li-title">Southron Star</span> - raid-wide</li>
-                        <h4 class="li-title">Incandescent Interlude + Ruthless R</h4>
-                        <ul class="section-links">
-                            <li class="compact-text">- 4 meteors (N, S, E and W) will spawn</li>
-                            <li class="compact-text">- Ruthless Refrain AoE markers on roles (sup or dps)</li>
-                            <li class="compact-text">- boss will cast Ruthless Refrain to knock-back everyone</li>
-                            <li class="compact-text">- <strong>IF MARKED WITH AoE</strong> can either anti-KB or get knocked to assigned intercard</li>
-                            <li class="compact-text">- <strong>IF NOT</strong> get knocked to meteors on your assigned cardinals</li>
-                            <li class="compact-text">- tanks can soak meteors even if marked</li>
-                        </ul>
-                        <h4 class="li-title">Runes (4 only)</h4>
-                        <ul class="section-links">
-                            <li class="compact-text"><strong>Well of Flame</strong> - line aoe, 4 players marked, stack at C after</li>
-                            <li class="compact-text"><strong>Close-quarter Crescendo</strong></li>
-                            <ul class="section-links">
-                                <li class="compact-text">- with CQ Crescendo, your movements will be very limited and it will be tricky to avoid Runes at the same time</li>
-                                <li class="compact-text">- take note of the 1st and 2nd runes. Check your CQ Crescendo direction. There's only one of those two runes you can go to if you take CQ Crescendo into account. Position yourself in a way that you'll move towards that Rune</li>
-                            </ul>
-                            <li class="compact-text"><strong>MM or RR</strong> - pull or push</li>
-                            <li class="compact-text"><strong>Phantom Flurry</strong> - 180 cleave TB, mit, OT vokes and takes MT spot</li>
-                        </ul>
-                        <li class="compact-text"><span class="li-title">Southron Star</span> - raid-wide</li>
-                        <li class="compact-text"><span class="li-title">MM or RR</span> - pull or push</li>
-                        <li class="compact-text"><span class="li-title">Well of Flame</span> - line aoe, 4 players marked, stack at C after</li>
-                        <li class="compact-text"><span class="li-title">Phantom Flurry</span> - 180 cleave TB, mit, OT vokes and takes MT spot</li>
-                        <li class="compact-text"><span class="li-title">Southron Star</span> - raid-wide</li>
-                        <li class="compact-text"><span class="li-title">MM or RR</span> - pull or push</li>
-                        <li class="compact-text"><span class="li-title">Southron Star</span> - raid-wide</li>
-                        <li class="compact-text"><span class="li-title">Phantom Flurry</span> - 180 cleave TB, mit, OT vokes and takes MT spot</li>
-                    </ul>
-                    <h3 id="markers" class="extra-info-title"><a href="#markers" class="section-permalink resources">#</a> Markers (Waymark Preset Plugin)</h3>
-                    <ul class="section-links">
-                        <li>{"Name":"Imported","MapID":1029,"A":{"X":99.89,"Y":0.0,"Z":91.06,"ID":0,"Active":true},"B":{"X":109.193,"Y":0.0,"Z":99.913,"ID":1,"Active":true},"C":{"X":100.111,"Y":0.0,"Z":109.04,"ID":2,"Active":true},"D":{"X":90.846,"Y":0.0,"Z":100.028,"ID":3,"Active":true},"One":{"X":92.093,"Y":0.0,"Z":92.145,"ID":4,"Active":true},"Two":{"X":107.964,"Y":0.0,"Z":92.123,"ID":5,"Active":true},"Three":{"X":108.006,"Y":0.0,"Z":107.931,"ID":6,"Active":true},"Four":{"X":92.034,"Y":0.0,"Z":107.938,"ID":7,"Active":true}}</li>
-                    </ul>
-                    <h3 id="prepull-setup" class="extra-info-title"><a href="#prepull-setup" class="section-permalink resources">#</a> Prepull setup</h3>
-                    <ul class="section-links">
-                        <h4 class="phase-title">Clocks</h4>
-                        <ul class="section-links">
-                            <li class="prepull-spots">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MT</li>
-                            <li class="prepull-spots">&nbsp;&nbsp;&nbsp; M1&nbsp;&nbsp;&nbsp;&nbsp;M2</li>
-                            <li class="prepull-spots">&nbsp; H1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OT</li>
-                            <li class="prepull-spots">&nbsp;&nbsp;&nbsp; R1&nbsp;&nbsp;&nbsp;&nbsp;R2</li>
-                            <li class="prepull-spots">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H2</li>
-                        </ul>
-                        <h4 class="phase-title">Phoenix Down</h4>
-                        <ul class="section-links">
-                            <li class="prepull-spots">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MT M1</li>
-                            <li>&nbsp;</li>
-                            <li class="prepull-spots">H1 R1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OT M2</li>
-                            <li>&nbsp;</li>
-                            <li style="margin-bottom: 1rem" class="prepull-spots">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H2 R2</li>
-                        </ul>
-                    </ul>
-                    <h3 id="pf-description" class="extra-info-title"><a href="#pf-description" class="section-permalink resources">#</a> PF Description</h3>
-                    <ul class="section-links">
-                        <li>tell / retell</li>
-                    </ul>
-                    <h3 id="unlock" class="extra-info-title"><a href="#unlock" class="section-permalink resources">#</a> Unlock</h3>
-                    <ul class="section-links">
-                        <li><a href="https://ffxiv.consolegameswiki.com/wiki/Faux_Hollows#Requirements" target="_blank" rel="noreferrer noopener" class="strat-link">Faux Hollows (required)<span class="link-arrow"> →</span></a></li>
-                        <li><a href="https://ffxiv.consolegameswiki.com/wiki/The_Fire-bird_Down_Below" target="_blank" rel="noreferrer noopener" class="strat-link">Hells' Kier (Unreal)<span class="link-arrow"> →</span></a></li>
-                    </ul>
-                    <h4 id="additional-resources" class="extra-info-title"><a href="#additional-resources" class="section-permalink resources">#</a> Additional Resources</h4>
-                    <ul class="section-links">
-                        <li><a href="https://youtu.be/h9BcZMBTh0U" target="_blank" rel="noreferrer noopener" class="strat-link">Hector Hectorson Guide<span class="link-arrow"> →</span></a></li>
-                        <li><a href="https://www.youtube.com/watch?v=NnTeFhDzWWo&pp=ygUTc3V6YWt1IHVucmVhbCBndWlkZQ%3D%3D" target="_blank" rel="noreferrer noopener" class="strat-link">Big Kobe Guide<span class="link-arrow"> →</span></a></li>
-                    </ul>
+                    <div class="fight-banner" data-banner="suzakuunreal.png"></div>
+                    <p class="tiny-text">Disclaimer: Unreal fights are the same as their Extreme versions but synced up to the current max level of the expansion. But even if they're the same fight, as the years go by, <strong>sometimes</strong>, the pf standard strats and resolutions can change. That usually involves ignoring a mechanic by resolving it with Tank LB as well as other methods. Have in mind that in order to unlock these fights, you only ever need to beat its normal mode and have unlocked Faux Hollows in Idyllshire.</p>
+                    <a href="#phase1" class="title-link">
+                        <h2 id="phase1" class="phase-title">Phase 1</h2>
+                    </a>
+                    <div class="section-links">
+                        <h3 class="mech-title">Screams of the Damned</h3>
+                        <p class="compact-text">raid-wide</p>
+                        <h3 class="mech-title">Rout</h3>
+                        <div class="section-links">
+                            <p class="compact-text-link">&bull; Suzaku charges at the center (straight-line AoE) and marks everyone with Rekindle (circular AoE)</p>
+                            <p class="compact-text">&bull; Birds on the ground will revive if clipped by Rekindle. Spread to avoid both the charge and birds</p>
+                        </div>
+                        <h3 class="mech-title">Fleeting Summer</h3>
+                        <p class="compact-text">conal aoe</p>
+                        <h3 class="mech-title">Cremate</h3>
+                        <p class="compact-text">magic tank-buster</p>
+                        <h3 class="mech-title">Phoenix Down</h3>
+                        <div class="section-links">
+                            <p class="compact-text">(color-coded)</p>
+                            <p class="prepull-spots">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MT M1</p>
+                            <p>&nbsp;</p>
+                            <p class="prepull-spots">H1 R1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OT M2</p>
+                            <p>&nbsp;</p>
+                            <p style="margin-bottom: 2rem" class="prepull-spots">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H2 R2</p>
+                            <p class="compact-text">&bull; Small and big feathers with big aoes will drop and all <strong>DPS</strong> will be marked with Rekindle (circular aoe)</p>
+                            <p class="compact-text">&bull; Everyone kill the <strong>SMALL</strong> feathers on your positions before they explode</p>
+                            <p class="compact-text">&bull; They can either be on cards or intercards</p>
+                            <p class="compact-text">&bull; Each <strong>DPS</strong> will revive its own bird with Rekindle</p>
+                            <p class="compact-text">&bull; Afterwards, everyone kills all revived birds ASAP</p>
+                        </div>
+                        <h3 class="mech-title">Screams of the Damned</h3>
+                        <p class="compact-text">raid-wide</p>
+                        <h3 class="mech-title">Eternal Flame</h3>
+                        <div class="section-links">
+                            <p class="compact-text">&bull; 8 arrows will appear, grab a spot</p>
+                            <p class="compact-text">&bull; then face the same direction as the arrow</p>
+                            <p class="compact-text">&bull; orbs will come toward center, facing the correct direction will block it</p>
+                            <p class="compact-text">&bull; if you do it correctly you get a damage up buff (10 total)</p>
+                            <div class="section-links">
+                                <p class="tiny-text">The real goal here is to not let the orbs touch the center, as it will feed the boss and make it do more damage after this. By dancing and getting the buffs to ourselves, we not only get stronger, but avoid a catastrophe.</p>
+                            </div>
+                        </div>
+                        <h3 class="mech-title">Scarlet Fever</h3>
+                        <div class="section-links">
+                            <p class="compact-text">Big transition raid-wide (does more or less damage based on how many orbs were missed)</p>
+                        </div>
+                    </div>
+                    <a href="#phase2" class="title-link">
+                        <h2 id="phase2" class="phase-title">Phase 2</h2>
+                    </a>
+                    <div class="section-links">
+                        <p class="tiny-text">(big hole on center)</p>
+                        <h3 class="mech-title">Southron Star</h3>
+                        <p class="compact-text">raid-wide</p>
+                        <h3 id="mm-or-rr" class="mech-title">Mesmerizing Melody (Pull) or Ruthless Refrain (Push)</h3>
+                        <div class="section-links">
+                            <p class="compact-text">&bull; <strong>Mesmerizing Melody</strong> pulls everyone towards the center. Move <strong>AWAY</strong> to avoid falling at the center hole</p>
+                            <p class="compact-text">&bull; <strong>Ruthless Refrain</strong> pushes everyone away. Stay <strong>CLOSE</strong> to avoid falling off the edge</p>
+                            <p class="compact-text">&bull; anti-KB <strong>works</strong></p>
+                        </div>
+                        <h3 id="well-of-flame" class="mech-title">Well of Flame</h3>
+                        <div class="section-links">
+                            <p class="compact-text">&bull; line aoe to random player</p>
+                            <p class="compact-text">&bull; 4 players get aoe'd</p>
+                            <p class="compact-text">&bull; after spreading, party stacks on marked healer at C</p>
+                        </div>
+                        <h3 id="phantom-flurry" class="mech-title">Phantom Flurry</h3>
+                        <div class="section-links">
+                            <p class="compact-text">&bull; TB that applies a vuln debuff and then a 180 frontal IK aoe</p>
+                            <p class="compact-text">&bull; mit, OT vokes, waits for cleave, then goes north to keep boss in place</p>
+                        </div>
+                        <h3 id="runes" class="mech-title">Runes</h3>
+                        <div class="section-links">
+                            <p class="compact-text">&bull; The arena will be divided by 4 quadrants: <strong>blue</strong>, <strong>black</strong>, <strong>yellow</strong>, <strong>purple</strong></p>
+                            <p class="compact-text">&bull; 8 runes representing the quadrants will appear on one side</p>
+                            <p class="compact-text">&bull; a fire bird will also appear and begin moving towards the runes (always CW)</p>
+                            <p class="compact-text">&bull; whichever rune the bird touches will have its corresponding quadrant explode</p>
+                            <p class="compact-text">&bull; there are 2 patterns per set here: <strong>1234 1234</strong> or <strong>1234 4321</strong></p>
+                            <p class="compact-text">&bull; there are 2 types of movements: clockwise explosions or cross (X) explosions</p>
+                            <p class="compact-text">> just check where the bird is going and avoid that color</p>
+                        </div>
+                        <h3 class="mech-title">Mesmerizing M or Ruthless R</h3>
+                        <p class="compact-text"><a href="#mm-or-rr" class="strat-link">pull or push</a> (go out or in)</p>
+                        <h3 id="cq-crescendo" class="mech-title">Close-quarter Crescendo</h3>
+                        <div class="section-links">
+                            <p class="compact-text-link">&bull; everyone gets tethered to an orb in a cardinal</p>
+                            <p class="compact-text-link">&bull; this orb will then force you to walk towards its direction</p>
+                            <p class="compact-text">&bull; just position properly in order not to fall off the arena</p>
+                        </div>
+                        <h3 class="mech-title">Well of Flame</h3>
+                        <p class="compact-text"><a href="#well-of-flame" class="strat-link">spread then stack on C</a></p>
+                        <h3 class="mech-title">Phantom Flurry</h3>
+                        <p class="compact-text"><a href="#phantom-flurry" class="strat-link">tank-buster</a></p>
+                        <p class="tiny-text">(Runes start happening along with mechanics)</p>
+                        <h3 class="mech-title">Runes</h3>
+                        <div class="section-links">
+                            <p class="compact-text"><a href="#runes" class="strat-link">Runes</a> while these two happen:</p>
+                            <p class="compact-text"><strong>MM or RR</strong> - <a href="#mm-or-rr" class="strat-link">pull or push</a></p>
+                            <p class="compact-text"><strong>Southron Star</strong> - raid-wide</p>
+                        </div>
+                        <h3 class="mech-title">Phantom Flurry</h3>
+                        <p class="compact-text"><a href="#phantom-flurry" class="strat-link">tank-buster</a></p>
+                        <h3 class="mech-title">Southron Star</h3>
+                        <p class="compact-text">raid-wide</p>
+                        <h3 class="mech-title">Incandescent Interlude + Ruthless R</h4>
+                        <div class="section-links">
+                            <p class="compact-text">&bull; 4 meteors (N, S, E and W) will spawn</p>
+                            <p class="compact-text">&bull; <a href="#mm-or-rr" class="strat-link">Ruthless Refrain</a> AoE markers on roles (sup or dps)</p>
+                            <p class="compact-text">&bull; boss will cast Ruthless Refrain to knock-back everyone</p>
+                            <p class="compact-text">&bull; <strong>IF MARKED WITH AoE</strong> can either anti-KB or get knocked to assigned intercard</p>
+                            <p class="compact-text">&bull; <strong>IF NOT</strong> get knocked to meteors on your assigned cardinals</p>
+                            <p class="compact-text">&bull; tanks can soak meteors even if marked</p>
+                        </div>
+                        <h3 class="mech-title">Runes (4 only)</h3>
+                        <div class="section-links">
+                            <p class="compact-text-link"><strong>Well of Flame</strong> - <a href="#well-of-flame" class="strat-link">spread then stack on C</a></p>
+                            <p class="compact-text-link"><strong>Close-quarter Crescendo - </strong><a href="#cq-crescendo" class="strat-link">CQ Crescendo</a></p>
+                            <div class="section-links">
+                                <p class="compact-text-link">&bull; with CQ Crescendo, your movements will be very limited and it will be tricky to avoid Runes at the same time</p>
+                                <p class="compact-text">&bull; take note of the 1st and 2nd runes. Check your CQ Crescendo direction. There's only one of those two runes you can go to if you take CQ Crescendo into account. Position yourself in a way that you'll move towards that Rune</p>
+                            </div>
+                            <p class="compact-text-link"><strong>MM or RR</strong> - <a href="#mm-or-rr" class="strat-link">pull or push</a></p>
+                            <p class="compact-text"><strong>Phantom Flurry</strong> - <a href="#phantom-flurry" class="strat-link">tank-buster</a></p>
+                        </div>
+                        <h3 class="mech-title">Final Mechanics</h3>
+                        <p class="compact-text"><strong>Southron Star</strong> - raid-wide</p>
+                        <p class="compact-text"><strong>MM or RR</strong> - <a href="#mm-or-rr" class="strat-link">pull or push</a></p>
+                        <p class="compact-text"><strong>Well of Flame</strong> - <a href="#well-of-flame" class="strat-link">spread then stack on C</a></p>
+                        <p class="compact-text"><strong>Phantom Flurry</strong> - <a href="#phantom-flurry" class="strat-link">tank-buster</a></p>
+                        <p class="compact-text"><strong>Southron Star</strong> - raid-wide</p>
+                        <p class="compact-text"><strong>MM or RR</strong> - <a href="#mm-or-rr" class="strat-link">pull or push</a></p>
+                        <p class="compact-text"><strong>Southron Star</strong> - raid-wide</p>
+                        <p class="compact-text"><strong>Phantom Flurry</strong> - <a href="#phantom-flurry" class="strat-link">tank-buster</a></p>
+                    </div>
+                    <a href="#markers" class="title-link">
+                        <h3 id="markers" class="extra-info-title">Markers (Waymark Preset Plugin)</h3>
+                    </a>
+                    <div class="section-links">
+                        <p class="compact-text">{"Name":"Imported","MapID":1029,"A":{"X":99.89,"Y":0.0,"Z":91.06,"ID":0,"Active":true},"B":{"X":109.193,"Y":0.0,"Z":99.913,"ID":1,"Active":true},"C":{"X":100.111,"Y":0.0,"Z":109.04,"ID":2,"Active":true},"D":{"X":90.846,"Y":0.0,"Z":100.028,"ID":3,"Active":true},"One":{"X":92.093,"Y":0.0,"Z":92.145,"ID":4,"Active":true},"Two":{"X":107.964,"Y":0.0,"Z":92.123,"ID":5,"Active":true},"Three":{"X":108.006,"Y":0.0,"Z":107.931,"ID":6,"Active":true},"Four":{"X":92.034,"Y":0.0,"Z":107.938,"ID":7,"Active":true}}</p>
+                    </div>
+                    <a href="#prepull-setup" class="title-link">
+                        <h3 id="prepull-setup" class="extra-info-title">Prepull setup</h3>
+                    </a>
+                    <div class="section-links">
+                            <p class="prepull-spots">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MT</p>
+                            <p class="prepull-spots">&nbsp;&nbsp;&nbsp; M1&nbsp;&nbsp;&nbsp;&nbsp;M2</p>
+                            <p class="prepull-spots">&nbsp; H1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OT</p>
+                            <p class="prepull-spots">&nbsp;&nbsp;&nbsp; R1&nbsp;&nbsp;&nbsp;&nbsp;R2</p>
+                            <p class="prepull-spots">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H2</p>
+                            <p style="margin-top: 2rem;" class="prepull-spots"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MT M1</p>
+                            <p>&nbsp;</p>
+                            <p class="prepull-spots"> H1 R1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OT M2</p>
+                            <p>&nbsp;</p>
+                            <p style="margin-bottom: 1rem" class="prepull-spots">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H2 R2</p>
+                    </div>
+                    <a href="#pf-description" class="title-link">
+                        <h3 id="pf-description" class="extra-info-title">PF Description</h3>
+                    </a>
+                    <div class="section-links">
+                        <p class="compact-text">tell / retell</p>
+                    </div>
+                    <a href="#unlock" class="title-link">
+                        <h3 id="unlock" class="extra-info-title">Unlock</h3>
+                    </a>
+                    <div class="section-links">
+                        <p class="compact-text-link"><a href="https://ffxiv.consolegameswiki.com/wiki/Faux_Hollows#Requirements" target="_blank" rel="noreferrer noopener" class="strat-link">Faux Hollows (required)<span class="link-arrow"> →</span></a></p>
+                        <p class="compact-text-link"><a href="https://ffxiv.consolegameswiki.com/wiki/The_Fire-bird_Down_Below" target="_blank" rel="noreferrer noopener" class="strat-link">Hells' Kier (Unreal)<span class="link-arrow"> →</span></a></p>
+                    </div>
+                    <a href="#additional-resources" class="title-link">
+                        <h4 id="additional-resources" class="extra-info-title">Additional Resources</h4>
+                    </a>
+                    <div class="section-links">
+                        <p class="compact-text-link"><a href="https://youtu.be/h9BcZMBTh0U" target="_blank" rel="noreferrer noopener" class="strat-link">Hector Hectorson Guide<span class="link-arrow"> →</span></a></p>
+                        <p class="compact-text-link"><a href="https://www.youtube.com/watch?v=NnTeFhDzWWo&pp=ygUTc3V6YWt1IHVucmVhbCBndWlkZQ%3D%3D" target="_blank" rel="noreferrer noopener" class="strat-link">Big Kobe Guide<span class="link-arrow"> →</span></a></p>
+                    </div>
                 </div>
                 <div class="bottom-nav-links">
                     <a href="../../index.html" class="back-link"><span class="back-arrow">←</span> Previous</a>
