@@ -1015,11 +1015,13 @@ footer {
     .nav-bar,
     .front-page,
     .ra {
-        width: 23rem;
+        width: 100%;
+        padding-right: 1rem;
     }
 
     .nav-bar {
-        width: 24rem;
+        width: 100%;
+        padding-right: 2rem;
     }
 
     .duty-card,
