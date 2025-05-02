@@ -309,8 +309,9 @@ li {
 }
 
 .sidebar h4 {
-    font-size: 1rem;
-
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
 }
 
 .sidebar .header-container h2 {
@@ -353,11 +354,15 @@ li {
     width: 12.5rem;
 }
 
+.table-of-contents h4 {
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+}
+
 .tb-content {
     display: flex;
     flex-direction: column;
     font-size: 1rem;
-    border-left: 1px solid var(--main-text-hover-color);
 }
 
 .table-of-contents > .tb-content > a {
@@ -365,6 +370,7 @@ li {
     padding: 0.4rem;
     padding-left: 1rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-left: 2px solid var(--main-text-hover-color);
 }
 
 .fight:hover {
@@ -507,7 +513,11 @@ ul {
 
 .strat-link {
     color: var(--text-link-color);
-    font-weight: bold;
+    font-weight: 500;
+}
+
+.strat-link:visited {
+    color: var(--text-link-visited-color);
 }
 
 .strat-link:hover {
@@ -532,7 +542,8 @@ ul {
 .mech-title {
     margin-top: 3rem;
     margin-bottom: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    font-weight: 400;
 }
 
 .extra-info-title {
@@ -696,6 +707,7 @@ h5 {
 
 .tiny-arrow {
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .dropdown-arrow i {
